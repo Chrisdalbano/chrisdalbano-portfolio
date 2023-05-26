@@ -1,6 +1,6 @@
 <template>
-  <section class="p-4 md:p-20 lg:p-32 mt-16">
-    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold">
+  <section class="p-4 md:p-20 lg:p-32">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold pt-32">
       CHRISTIAN D'ALBANO
     </h1>
     <h2 class="text-xl md:text-2xl mt-2">
@@ -8,7 +8,7 @@
     </h2>
 
     <p class="mt-8 text-lg max-w-4xl">
-      From creative ideas to responsive and useful designs, my love for
+      From creative ideas to responsive and useful web applications, my love for
       development is deeply influenced by my passion to turn ideas into
       functional matter. I enjoy breaking down problems to bring life impactful,
       user-based websites pixel by pixel, request by you got it. Let’s use this
@@ -16,7 +16,7 @@
     </p>
 
     <button
-      class="bg-red-brick rounded p-2 pl-4 pr-4 mt-8 hover:bg-red-800 font-bold"
+      class="bg-red-brick rounded p-2 pl-4 pr-4 mt-4 hover:bg-red-800 font-bold"
       @click="goToBottom"
       @mouseenter="scaleButtonUp"
       @mouseleave="scaleButtonDown"
@@ -25,14 +25,50 @@
       SHOW ME
     </button>
   </section>
-  <section class="p-4 md:pl-20 lg:ml-4 mt-16 lg:mt-32">
-    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mt-10">
+  <section class="bg-gray-900 opacity-80 mt-56 py-6 px-4" ref="craftingSection">
+    <h2 class="text-center text-3xl font-bold mb-8 text-white-cream">
+      Crafting Web Wonders with
+    </h2>
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mx-auto w-full md:max-w-4xl"
+      ref="skillsGrid"
+    >
+      <div
+        class="skills-section bg-yellow-tiger p-4 rounded shadow-md font-semibold"
+      >
+        <h3 class="text-2xl font-bold mb-4 text-gray-900">Front-End</h3>
+        <p class="text-base text-gray-900">JavaScript</p>
+        <p class="text-base text-gray-900">TypeScript</p>
+        <p class="text-base text-gray-900">Vue.js</p>
+        <p class="text-base text-gray-900">Tailwind</p>
+        <p class="text-base text-gray-900">Sass</p>
+      </div>
+      <div
+        class="skills-section bg-yellow-tiger p-4 rounded shadow-md font-semibold"
+      >
+        <h3 class="text-2xl font-bold mb-4 text-gray-900">Back-End</h3>
+        <p class="text-base text-gray-900">Node.js</p>
+        <p class="text-base text-gray-900">MySQL</p>
+        <p class="text-base text-gray-900">Express</p>
+        <p class="text-base text-gray-900">Firebase</p>
+      </div>
+    </div>
+  </section>
+  <section class="pl-4 md:pl-20 lg:ml-4 lg:mt-4">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold">
       CHOOSE A WEB PROJECT
     </h1>
-    <h2 class="text-xl md:text-2xl mt-2">Ah, and don't forget to enjoy it</h2>
+    <h2 class="text-xl md:text-2xl mt-2">
+      These are only a few of my recent websites.
+    </h2>
   </section>
   <div class="flex text-black p-2 lg:text-2xl pb-8">
-    <div class="w-full sm:w-1/2 lg:w-1/3 mx-2 rounded-lg overflow-hidden">
+    <div
+      class="w-full sm:w-1/2 lg:w-1/4 mx-4 rounded-lg overflow-hidden"
+      @mouseenter="scaleProjectUp"
+      @mouseleave="scaleProjectDown"
+      ref="project1"
+    >
       <div
         class="bg-cover h-64"
         :style="{
@@ -44,12 +80,18 @@
       >
         <p class="text-center font-semibold">QuizMeGPT</p>
         <p class="text-center text-base mt-2">
-          A quiz application using GPT-3 to generate questions and answers.
+          An AI based quiz generator web application, using OpenAI's API
+          chat-gpt-turbo.
         </p>
       </div>
     </div>
 
-    <div class="w-full sm:w-1/2 lg:w-1/3 mx-2 rounded-lg overflow-hidden">
+    <div
+      class="w-full sm:w-1/2 lg:w-1/4 mx-4 rounded-lg overflow-hidden"
+      @mouseenter="scaleProjectUp"
+      @mouseleave="scaleProjectDown"
+      ref="project2"
+    >
       <div
         class="bg-cover h-64"
         :style="{
@@ -62,13 +104,18 @@
       >
         <p class="text-center font-semibold">Moonlight Coffee</p>
         <p class="text-center text-base mt-2">
-          A beutiful local specialty Coffee Shop website with some cool
+          A beautiful responsive specialty coffee shop website with some cool
           animations and interesting items.
         </p>
       </div>
     </div>
 
-    <div class="w-full sm:w-1/2 lg:w-1/3 mx-2 rounded-lg overflow-hidden">
+    <div
+      class="w-full sm:w-1/2 lg:w-1/4 mx-4 rounded-lg overflow-hidden"
+      @mouseenter="scaleProjectUp"
+      @mouseleave="scaleProjectDown"
+      ref="project3"
+    >
       <div
         class="bg-cover h-64"
         :style="{
@@ -81,7 +128,8 @@
       >
         <p class="text-center font-semibold">Costume Chronicles</p>
         <p class="text-center text-base mt-2">
-          An electronic store website dedicated to sell costumes.
+          An electronic store website dedicated to sell costumes, with cart
+          features and sorting searches.
         </p>
       </div>
     </div>
@@ -106,18 +154,60 @@
 <script>
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 export default {
   name: "HomeView",
+  data() {
+    return {
+      bottomScrollTriggered: false,
+    };
+  },
   mounted() {
     // After the component is mounted, check the scroll position
     window.addEventListener("scroll", this.checkScroll);
+    window.addEventListener("scroll", this.checkScroll);
+
+    const projectElements = [
+      this.$refs.project1,
+      this.$refs.project2,
+      this.$refs.project3,
+    ];
+
+    projectElements.forEach((element) => {
+      gsap.from(element, {
+        autoAlpha: 0, // start with opacity 0
+        scale: 0, // start from zero size
+        duration: 1.3,
+        ease: "elastic.out", // you can use 'back.out' for a blooming effect
+        scrollTrigger: {
+          trigger: element,
+          start: "top bottom-=100",
+          toggleActions: "play none none reverse",
+        },
+      });
+    });
+
+    gsap.from(this.$refs.skillsGrid, {
+      autoAlpha: 0,
+      y: 100,
+      duration: 0.7,
+      ease: "power1.out",
+      scrollTrigger: {
+        trigger: this.$refs.skillsGrid,
+        start: "top bottom-=100",
+        toggleActions: "play none none reverse",
+      },
+    });
   },
   beforeUnmount() {
     // Remove listener when the component is destroyed
     window.removeEventListener("scroll", this.checkScroll);
+
+    ScrollTrigger.getAll().forEach((ST) => ST.kill());
   },
   methods: {
     checkScroll() {
@@ -130,16 +220,16 @@ export default {
     },
     scaleButtonUp() {
       gsap.to(this.$refs.showMeButton, {
-        scale: 1.1, // Adjust this to your liking
-        duration: 0.2, // And this
-        ease: "power1.out", // And this
+        scale: 1.1,
+        duration: 0.2,
+        ease: "power1.out",
       });
     },
     scaleButtonDown() {
       gsap.to(this.$refs.showMeButton, {
-        scale: 1, // Back to original size
-        duration: 0.1, // Same duration as the scaling up for symmetry
-        ease: "power1.out", // And same easing function
+        scale: 1,
+        duration: 0.1,
+        ease: "power1.out",
       });
     },
     backToTop() {
@@ -147,11 +237,46 @@ export default {
     },
     goToBottom() {
       console.log("goToBottom called");
-      console.log("scrollHeight:", document.documentElement.scrollHeight);
+      const navbarHeight = document.querySelector(".navbar").offsetHeight;
+      const sectionOffsetTop =
+        this.$refs.craftingSection.offsetTop - navbarHeight;
+      console.log("sectionOffsetTop:", sectionOffsetTop);
       gsap.to(window, {
         duration: 2.3,
-        scrollTo: { y: document.documentElement.scrollHeight, autoKill: false },
+        scrollTo: { y: sectionOffsetTop, autoKill: false },
         ease: "power2.inOut",
+      });
+    },
+    goToVeryBottom() {
+      if (this.bottomScrollTriggered) {
+        // If the function has already been called, do nothing and return.
+        return;
+      }
+      console.log("goToBottom called");
+      const sectionOffsetTop = document.body.scrollHeight; // This will scroll to the bottom of the page
+      console.log("sectionOffsetTop:", sectionOffsetTop);
+      gsap.to(window, {
+        delay: 5,
+        duration: 2.3,
+        scrollTo: { y: sectionOffsetTop, autoKill: false },
+        ease: "power2.inOut",
+      });
+      this.bottomScrollTriggered = true;
+    },
+    scaleProjectUp(event) {
+      gsap.to(event.currentTarget, {
+        scale: 1.1,
+        duration: 0.3,
+        ease: "power1.out",
+      });
+
+      this.goToVeryBottom();
+    },
+    scaleProjectDown(event) {
+      gsap.to(event.currentTarget, {
+        scale: 1,
+        duration: 0.3,
+        ease: "power1.out",
       });
     },
   },

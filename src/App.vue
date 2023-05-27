@@ -1,7 +1,7 @@
 <template>
-  <div id="app" class="bg-[#3A3F58] min-h-screen text-white-cream">
+  <div id="app" class="text-white-cream">
     <NavBar />
-    <router-view/>
+    <router-view />
   </div>
 </template>
 <script>
@@ -13,7 +13,9 @@ export default {
 };
 </script>
 <style>
-body { 
+body {
   margin: 0;
 }
+
+
 </style>

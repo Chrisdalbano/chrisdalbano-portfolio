@@ -1,154 +1,187 @@
 <template>
-  <section class="p-4 md:p-20 lg:p-32">
-    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold pt-32">
-      CHRISTIAN D'ALBANO
-    </h1>
-    <h2 class="text-xl md:text-2xl mt-2">
-      is a Web Developer based in Orlando, FL
-    </h2>
+  <div class="bg-[#3A3F58] min-h-screen">
+    <section class="p-4 md:p-20 lg:p-32">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold pt-32" ref="title">
+        CHRISTIAN D'ALBANO
+      </h1>
+      <h2 class="text-xl md:text-2xl mt-2" ref="subtitle">
+        is a Web Developer based in Orlando, FL
+      </h2>
 
-    <p class="mt-8 text-lg max-w-4xl">
-      From creative ideas to responsive and useful web applications, my love for
-      development is deeply influenced by my passion to turn ideas into
-      functional matter. I enjoy breaking down problems to bring life impactful,
-      user-based websites pixel by pixel, request by you got it. Let’s use this
-      momentum.
-    </p>
+      <p class="mt-8 text-lg max-w-4xl">
+        From creative ideas to responsive and useful web applications, my love
+        for development is deeply influenced by my passion to turn ideas into
+        functional matter. I enjoy breaking down problems to bring life
+        impactful, user-based websites pixel by pixel, request by you got it.
+        Let’s use this momentum.
+      </p>
 
-    <button
-      class="bg-red-brick rounded p-2 pl-4 pr-4 mt-4 hover:bg-red-800 font-bold"
-      @click="goToBottom"
-      @mouseenter="scaleButtonUp"
-      @mouseleave="scaleButtonDown"
-      ref="showMeButton"
-    >
-      SHOW ME
-    </button>
-  </section>
-  <section class="bg-gray-900 opacity-80 mt-56 py-6 px-4" ref="craftingSection">
-    <h2 class="text-center text-3xl font-bold mb-8 text-white-cream">
-      Crafting Web Wonders with
-    </h2>
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mx-auto w-full md:max-w-4xl"
-      ref="skillsGrid"
-    >
-      <div
-        class="skills-section bg-yellow-tiger p-4 rounded shadow-md font-semibold"
+      <button
+        class="bg-red-brick rounded p-2 pl-4 pr-4 mt-4 hover:bg-red-800 font-bold"
+        @click="goToBottom"
+        @mouseenter="scaleButtonUp"
+        @mouseleave="scaleButtonDown"
+        ref="showMeButton"
       >
-        <h3 class="text-2xl font-bold mb-4 text-gray-900">Front-End</h3>
-        <p class="text-base text-gray-900">JavaScript</p>
-        <p class="text-base text-gray-900">TypeScript</p>
-        <p class="text-base text-gray-900">Vue.js</p>
-        <p class="text-base text-gray-900">Tailwind</p>
-        <p class="text-base text-gray-900">Sass</p>
+        SHOW ME
+      </button>
+    </section>
+    <section class="flex m-4 hover:border rounded max-w-xs mt-48">
+      <div class="bg-gray-900 opacity-80 p-4 icon-container">
+        <a href="https://www.linkedin.com/in/chrisdalb/"  target="_blank" class="icon-link">
+          <img
+            class="icon"
+            src="https://img.icons8.com/color/48/000000/linkedin.png"
+            alt="Linkedin"
+          />
+        </a>
+        <a href="https://github.com/chrisdalbano/"  target="_blank" class="icon-link">
+          <img
+            class="icon"
+            src="https://img.icons8.com/color/48/000000/github--v1.png"
+            alt="Github"
+          />
+        </a>
+        <a href="https://twitter.com/chrisdalbano/"  target="_blank" class="icon-link">
+          <img
+            class="icon"
+            src="https://img.icons8.com/color/48/000000/twitter--v1.png"
+            alt="Twitter"
+          />
+        </a>
       </div>
+      <div class="p-4">
+        <p class="text-semibold">Me. In the network.</p>
+      </div>
+    </section>
+    <section
+      class="bg-gray-900 opacity-80 mt-12 py-6 px-4"
+      ref="craftingSection"
+    >
+      <h2 class="text-center text-3xl font-bold mb-8 text-white-cream">
+        Crafting Web Wonders with
+      </h2>
       <div
-        class="skills-section bg-yellow-tiger p-4 rounded shadow-md font-semibold"
+        class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mx-auto w-full md:max-w-4xl"
+        ref="skillsGrid"
       >
-        <h3 class="text-2xl font-bold mb-4 text-gray-900">Back-End</h3>
-        <p class="text-base text-gray-900">Node.js</p>
-        <p class="text-base text-gray-900">MySQL</p>
-        <p class="text-base text-gray-900">Express</p>
-        <p class="text-base text-gray-900">Firebase</p>
+        <div
+          class="skills-section bg-yellow-tiger p-4 rounded shadow-md font-semibold"
+        >
+          <h3 class="text-2xl font-bold mb-4 text-gray-900">Front-End</h3>
+          <p class="text-base text-gray-900">JavaScript</p>
+          <p class="text-base text-gray-900">TypeScript</p>
+          <p class="text-base text-gray-900">Vue.js</p>
+          <p class="text-base text-gray-900">Tailwind</p>
+          <p class="text-base text-gray-900">Sass</p>
+        </div>
+        <div
+          class="skills-section bg-yellow-tiger p-4 rounded shadow-md font-semibold"
+        >
+          <h3 class="text-2xl font-bold mb-4 text-gray-900">Back-End</h3>
+          <p class="text-base text-gray-900">Node.js</p>
+          <p class="text-base text-gray-900">MySQL</p>
+          <p class="text-base text-gray-900">Express</p>
+          <p class="text-base text-gray-900">Firebase</p>
+        </div>
+      </div>
+    </section>
+    <section class="pl-4 md:pl-20 lg:ml-4 lg:mt-4">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold">
+        CHOOSE A WEB PROJECT
+      </h1>
+      <h2 class="text-xl md:text-2xl mt-2">
+        These are only a few of my recent websites.
+      </h2>
+    </section>
+    <div class="flex text-black p-2 lg:text-2xl pb-8">
+      <div
+        class="w-full sm:w-1/2 lg:w-1/4 mx-4 rounded-lg overflow-hidden"
+        @mouseenter="scaleProjectUp"
+        @mouseleave="scaleProjectDown"
+        ref="project1"
+      >
+        <div
+          class="bg-cover h-64"
+          :style="{
+            backgroundImage: 'url(' + require('@/assets/qmgpt2.jpg') + ')',
+          }"
+        ></div>
+        <div
+          class="h-48 bg-white-cream flex items-center justify-center flex-col p-4"
+        >
+          <p class="text-center font-semibold">QuizMeGPT</p>
+          <p class="text-center text-base mt-2">
+            An AI based quiz generator web application, using OpenAI's API
+            chat-gpt-turbo.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="w-full sm:w-1/2 lg:w-1/4 mx-4 rounded-lg overflow-hidden"
+        @mouseenter="scaleProjectUp"
+        @mouseleave="scaleProjectDown"
+        ref="project2"
+      >
+        <div
+          class="bg-cover h-64"
+          :style="{
+            backgroundImage:
+              'url(' + require('@/assets/moonlightcoffee.jpg') + ')',
+          }"
+        ></div>
+        <div
+          class="h-48 bg-white-cream flex items-center justify-center flex-col p-4"
+        >
+          <p class="text-center font-semibold">Moonlight Coffee</p>
+          <p class="text-center text-base mt-2">
+            A beautiful responsive specialty coffee shop website with some cool
+            animations and interesting items.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="w-full sm:w-1/2 lg:w-1/4 mx-4 rounded-lg overflow-hidden"
+        @mouseenter="scaleProjectUp"
+        @mouseleave="scaleProjectDown"
+        ref="project3"
+      >
+        <div
+          class="bg-cover h-64"
+          :style="{
+            backgroundImage:
+              'url(' + require('@/assets/costumechronicles.jpg') + ')',
+          }"
+        ></div>
+        <div
+          class="h-48 bg-white-cream flex items-center justify-center flex-col p-4"
+        >
+          <p class="text-center font-semibold">Costume Chronicles</p>
+          <p class="text-center text-base mt-2">
+            An electronic store website dedicated to sell costumes, with cart
+            features and sorting searches.
+          </p>
+        </div>
       </div>
     </div>
-  </section>
-  <section class="pl-4 md:pl-20 lg:ml-4 lg:mt-4">
-    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold">
-      CHOOSE A WEB PROJECT
-    </h1>
-    <h2 class="text-xl md:text-2xl mt-2">
-      These are only a few of my recent websites.
-    </h2>
-  </section>
-  <div class="flex text-black p-2 lg:text-2xl pb-8">
-    <div
-      class="w-full sm:w-1/2 lg:w-1/4 mx-4 rounded-lg overflow-hidden"
-      @mouseenter="scaleProjectUp"
-      @mouseleave="scaleProjectDown"
-      ref="project1"
-    >
+    <div class="p-4 md:pl-20 lg:ml-4">
       <div
-        class="bg-cover h-64"
-        :style="{
-          backgroundImage: 'url(' + require('@/assets/qmgpt2.jpg') + ')',
-        }"
-      ></div>
-      <div
-        class="h-48 bg-white-cream flex items-center justify-center flex-col p-4"
+        id="back-to-top"
+        @click="backToTop"
+        class="bottom-4 left-4 bg-red-brick rounded w-12 h-12 flex items-center justify-center cursor-pointer transition-opacity duration-300 opacity-0 lg:opacity-100"
       >
-        <p class="text-center font-semibold">QuizMeGPT</p>
-        <p class="text-center text-base mt-2">
-          An AI based quiz generator web application, using OpenAI's API
-          chat-gpt-turbo.
-        </p>
+        <span class="text-white text-2xl">&#x2191;</span>
       </div>
     </div>
 
-    <div
-      class="w-full sm:w-1/2 lg:w-1/4 mx-4 rounded-lg overflow-hidden"
-      @mouseenter="scaleProjectUp"
-      @mouseleave="scaleProjectDown"
-      ref="project2"
-    >
-      <div
-        class="bg-cover h-64"
-        :style="{
-          backgroundImage:
-            'url(' + require('@/assets/moonlightcoffee.jpg') + ')',
-        }"
-      ></div>
-      <div
-        class="h-48 bg-white-cream flex items-center justify-center flex-col p-4"
-      >
-        <p class="text-center font-semibold">Moonlight Coffee</p>
-        <p class="text-center text-base mt-2">
-          A beautiful responsive specialty coffee shop website with some cool
-          animations and interesting items.
-        </p>
-      </div>
-    </div>
-
-    <div
-      class="w-full sm:w-1/2 lg:w-1/4 mx-4 rounded-lg overflow-hidden"
-      @mouseenter="scaleProjectUp"
-      @mouseleave="scaleProjectDown"
-      ref="project3"
-    >
-      <div
-        class="bg-cover h-64"
-        :style="{
-          backgroundImage:
-            'url(' + require('@/assets/costumechronicles.jpg') + ')',
-        }"
-      ></div>
-      <div
-        class="h-48 bg-white-cream flex items-center justify-center flex-col p-4"
-      >
-        <p class="text-center font-semibold">Costume Chronicles</p>
-        <p class="text-center text-base mt-2">
-          An electronic store website dedicated to sell costumes, with cart
-          features and sorting searches.
-        </p>
-      </div>
-    </div>
+    <footer class="p-8">
+      <p class="flex justify-center text-blue-300">
+        Made by Christian D'Albano, fueled by Espresso shots.
+      </p>
+    </footer>
   </div>
-  <div class="p-4 md:pl-20 lg:ml-4">
-    <div
-      id="back-to-top"
-      @click="backToTop"
-      class="bottom-4 left-4 bg-red-brick rounded w-12 h-12 flex items-center justify-center cursor-pointer transition-opacity duration-300 opacity-0 lg:opacity-100"
-    >
-      <span class="text-white text-2xl">&#x2191;</span>
-    </div>
-  </div>
-
-  <footer class="p-8">
-    <p class="flex justify-center text-blue-300">
-      Made by Christian D'Albano, fueled by Espresso shots.
-    </p>
-  </footer>
 </template>
 
 <script>
@@ -170,7 +203,32 @@ export default {
     // After the component is mounted, check the scroll position
     window.addEventListener("scroll", this.checkScroll);
     window.addEventListener("scroll", this.checkScroll);
+    gsap.to(this.$refs.fog, {
+      opacity: 0.1, // animate to 10% opacity
+      duration: 3, // over 3 seconds
+      repeat: -1, // infinite repeats
+      yoyo: true, // go back to the original opacity after reaching the end
+      ease: "power1.inOut", // easing function for smooth animation
+    });
 
+    const parallaxItems = [
+      { ref: this.$refs.sun, speed: 0.3 },
+      { ref: this.$refs.cloud1, speed: 0.5 },
+      { ref: this.$refs.cloud2, speed: 0.7 },
+      { ref: this.$refs.cloud3, speed: 0.9 },
+    ];
+    parallaxItems.forEach((item) => {
+      gsap.to(item.ref, {
+        y: item.speed * window.innerHeight,
+        ease: "none",
+        scrollTrigger: {
+          trigger: this.$el,
+          start: "top top",
+          end: "bottom bottom",
+          scrub: true,
+        },
+      });
+    });
     const projectElements = [
       this.$refs.project1,
       this.$refs.project2,
@@ -256,8 +314,8 @@ export default {
       const sectionOffsetTop = document.body.scrollHeight; // This will scroll to the bottom of the page
       console.log("sectionOffsetTop:", sectionOffsetTop);
       gsap.to(window, {
-        delay: 5,
-        duration: 2.3,
+        delay: 1.2,
+        duration: 0.2,
         scrollTo: { y: sectionOffsetTop, autoKill: false },
         ease: "power2.inOut",
       });
@@ -282,4 +340,28 @@ export default {
   },
 };
 </script>
-<style></style>
+<style>
+.icon-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon-link {
+  transition: border 0.3s ease-in-out;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+}
+
+.icon-link:hover {
+  border: 2px solid #fff;
+}
+
+.icon {
+  filter: grayscale(100%);
+}
+</style>

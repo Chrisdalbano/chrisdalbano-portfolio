@@ -1,5 +1,9 @@
 <template>
-  <div class="bg-[#3A3F58] min-h-screen">
+  <!-- <div class="bg-[#3A3F58] min-h-screen"> -->
+  <div>
+    <div id="floating-item-1"></div>
+    <div id="floating-item-2"></div>
+    <div id="floating-item-3"></div>
     <section class="p-4 md:p-20 lg:p-32">
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold pt-32" ref="title">
         CHRISTIAN D'ALBANO
@@ -28,21 +32,33 @@
     </section>
     <section class="flex m-4 hover:border rounded max-w-xs mt-48">
       <div class="bg-gray-900 opacity-80 p-4 icon-container">
-        <a href="https://www.linkedin.com/in/chrisdalb/"  target="_blank" class="icon-link">
+        <a
+          href="https://www.linkedin.com/in/chrisdalb/"
+          target="_blank"
+          class="icon-link"
+        >
           <img
             class="icon"
             src="https://img.icons8.com/color/48/000000/linkedin.png"
             alt="Linkedin"
           />
         </a>
-        <a href="https://github.com/chrisdalbano/"  target="_blank" class="icon-link">
+        <a
+          href="https://github.com/chrisdalbano/"
+          target="_blank"
+          class="icon-link"
+        >
           <img
             class="icon"
             src="https://img.icons8.com/color/48/000000/github--v1.png"
             alt="Github"
           />
         </a>
-        <a href="https://twitter.com/chrisdalbano/"  target="_blank" class="icon-link">
+        <a
+          href="https://twitter.com/chrisdalbano/"
+          target="_blank"
+          class="icon-link"
+        >
           <img
             class="icon"
             src="https://img.icons8.com/color/48/000000/twitter--v1.png"
@@ -76,7 +92,7 @@
           <p class="text-base text-gray-900">Sass</p>
         </div>
         <div
-          class="skills-section bg-yellow-tiger p-4 rounded shadow-md font-semibold"
+          class="skills-section bg-red-brick p-4 rounded shadow-md font-semibold"
         >
           <h3 class="text-2xl font-bold mb-4 text-gray-900">Back-End</h3>
           <p class="text-base text-gray-900">Node.js</p>
@@ -90,7 +106,7 @@
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold">
         CHOOSE A WEB PROJECT
       </h1>
-      <h2 class="text-xl md:text-2xl mt-2">
+      <h2 class="text-xl md:text-2xl mt-2 mb-8">
         These are only a few of my recent websites.
       </h2>
     </section>
@@ -165,6 +181,11 @@
           </p>
         </div>
       </div>
+      <div class="flex justify-center mt-8">
+        <button class="button-view rounded bg-red-brick text-white text-  xl font-bold mt-32 mb-32">
+          VIEW MORE
+        </button>
+      </div>
     </div>
     <div class="p-4 md:pl-20 lg:ml-4">
       <div
@@ -197,77 +218,80 @@ export default {
   data() {
     return {
       bottomScrollTriggered: false,
+      mouseX: 0,
+      mouseY: 0,
     };
   },
+
   mounted() {
     // After the component is mounted, check the scroll position
     window.addEventListener("scroll", this.checkScroll);
     window.addEventListener("scroll", this.checkScroll);
-    gsap.to(this.$refs.fog, {
-      opacity: 0.1, // animate to 10% opacity
-      duration: 3, // over 3 seconds
-      repeat: -1, // infinite repeats
-      yoyo: true, // go back to the original opacity after reaching the end
-      ease: "power1.inOut", // easing function for smooth animation
-    });
+    window.addEventListener("mousemove", this.handleMouseMove);
 
-    const parallaxItems = [
-      { ref: this.$refs.sun, speed: 0.3 },
-      { ref: this.$refs.cloud1, speed: 0.5 },
-      { ref: this.$refs.cloud2, speed: 0.7 },
-      { ref: this.$refs.cloud3, speed: 0.9 },
-    ];
-    parallaxItems.forEach((item) => {
-      gsap.to(item.ref, {
-        y: item.speed * window.innerHeight,
-        ease: "none",
-        scrollTrigger: {
-          trigger: this.$el,
-          start: "top top",
-          end: "bottom bottom",
-          scrub: true,
-        },
+    //parallax attempt
+    this.$nextTick(() => {
+      // your animation code here
+      const projectElements = [
+        this.$refs.project1,
+        this.$refs.project2,
+        this.$refs.project3,
+      ];
+
+      projectElements.forEach((element) => {
+        gsap.from(element, {
+          autoAlpha: 0, // start with opacity 0
+          scale: 0, // start from zero size
+          duration: 1.3,
+          ease: "elastic.out", // you can use 'back.out' for a blooming effect
+          scrollTrigger: {
+            trigger: element,
+            start: "top bottom-=100",
+            toggleActions: "play none none reverse",
+          },
+        });
       });
-    });
-    const projectElements = [
-      this.$refs.project1,
-      this.$refs.project2,
-      this.$refs.project3,
-    ];
 
-    projectElements.forEach((element) => {
-      gsap.from(element, {
-        autoAlpha: 0, // start with opacity 0
-        scale: 0, // start from zero size
-        duration: 1.3,
-        ease: "elastic.out", // you can use 'back.out' for a blooming effect
+      gsap.from(this.$refs.skillsGrid, {
+        autoAlpha: 0,
+        y: 100,
+        duration: 0.7,
+        ease: "power1.out",
         scrollTrigger: {
-          trigger: element,
+          trigger: this.$refs.skillsGrid,
           start: "top bottom-=100",
           toggleActions: "play none none reverse",
         },
       });
     });
-
-    gsap.from(this.$refs.skillsGrid, {
-      autoAlpha: 0,
-      y: 100,
-      duration: 0.7,
-      ease: "power1.out",
-      scrollTrigger: {
-        trigger: this.$refs.skillsGrid,
-        start: "top bottom-=100",
-        toggleActions: "play none none reverse",
-      },
-    });
   },
   beforeUnmount() {
     // Remove listener when the component is destroyed
     window.removeEventListener("scroll", this.checkScroll);
+    window.removeEventListener("mousemove", this.handleMouseMove);
 
     ScrollTrigger.getAll().forEach((ST) => ST.kill());
   },
   methods: {
+    handleMouseMove(e) {
+      this.mouseX = e.clientX;
+      this.mouseY = e.clientY;
+
+      gsap.to("#floating-item-1", {
+        x: (this.mouseX - window.innerWidth / 2) * 0.01,
+        y: (this.mouseY - window.innerHeight / 2) * 0.01,
+      });
+
+      gsap.to("#floating-item-2", {
+        x: (this.mouseX - window.innerWidth / 2) * 0.02,
+        y: (this.mouseY - window.innerHeight / 2) * 0.02,
+      });
+
+      gsap.to("#floating-item-3", {
+        x: (this.mouseX - window.innerWidth / 2) * 0.03,
+        y: (this.mouseY - window.innerHeight / 2) * 0.03,
+      });
+    },
     checkScroll() {
       // Only show the button when the page is scrolled down 100px or more
       if (window.pageYOffset > 100) {
@@ -305,22 +329,22 @@ export default {
         ease: "power2.inOut",
       });
     },
-    goToVeryBottom() {
-      if (this.bottomScrollTriggered) {
-        // If the function has already been called, do nothing and return.
-        return;
-      }
-      console.log("goToBottom called");
-      const sectionOffsetTop = document.body.scrollHeight; // This will scroll to the bottom of the page
-      console.log("sectionOffsetTop:", sectionOffsetTop);
-      gsap.to(window, {
-        delay: 1.2,
-        duration: 0.2,
-        scrollTo: { y: sectionOffsetTop, autoKill: false },
-        ease: "power2.inOut",
-      });
-      this.bottomScrollTriggered = true;
-    },
+    // goToVeryBottom() {
+    //   if (this.bottomScrollTriggered) {
+    //     // If the function has already been called, do nothing and return.
+    //     return;
+    //   }
+    //   console.log("goToBottom called");
+    //   const sectionOffsetTop = document.body.scrollHeight; // This will scroll to the bottom of the page
+    //   console.log("sectionOffsetTop:", sectionOffsetTop);
+    //   gsap.to(window, {
+    //     delay: 1.2,
+    //     duration: 0.2,
+    //     scrollTo: { y: sectionOffsetTop, autoKill: false },
+    //     ease: "power2.inOut",
+    //   });
+    //   this.bottomScrollTriggered = true;
+    // },
     scaleProjectUp(event) {
       gsap.to(event.currentTarget, {
         scale: 1.1,
@@ -328,7 +352,7 @@ export default {
         ease: "power1.out",
       });
 
-      this.goToVeryBottom();
+      // this.goToVeryBottom();
     },
     scaleProjectDown(event) {
       gsap.to(event.currentTarget, {
@@ -363,5 +387,65 @@ export default {
 
 .icon {
   filter: grayscale(100%);
+}
+
+#floating-item-1 {
+  background-image: url("@/assets/props/sun.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 35%;
+  height: 35%;
+  position: absolute;
+  top: 20%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+  opacity: 1;
+}
+
+#floating-item-2 {
+  background-image: url("@/assets/props/cloud1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  top: 70%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+  opacity: 0.9;
+}
+
+#floating-item-3 {
+  background-image: url("@/assets/props/cloud2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 15%;
+  height: 15%;
+  position: absolute;
+  top: 70%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+  opacity: 0.9;
+}
+
+body {
+  background-color: #3a3f58;
+}
+
+.button-view {
+  display: inline-block;
+  padding: 10px 20px;
+  
+  text-align: center;
+
+  transition: all 0.3s ease;
+}
+
+.button-view:hover {
+  background-color: #52160b;
+ 
 }
 </style>

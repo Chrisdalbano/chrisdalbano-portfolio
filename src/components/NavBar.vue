@@ -2,12 +2,17 @@
   <transition name="fade">
     <nav class="navbar" :class="{ 'bg-gray-800': isScrolled }">
       <div class="space-x-4 md:space-x-6 pl-4 pt-2 pb-2">
-        <router-link 
-          v-for="(route, index) in routes" 
+        <router-link
+          v-for="(route, index) in routes"
           :key="index"
-          :to="route.path" 
+          :to="route.path"
           class="text-lg md:text-xl p-2 rounded hover:bg-gray-800 hover:bg-opacity-50 transition-all duration-300 ease-in-out"
-          :class="[$route.path === route.path ? 'bg-gray-800 bg-opacity-80 text-blue-300' : '', 'hover:text-blue-100']"
+          :class="[
+            $route.path === route.path
+              ? 'bg-gray-800 bg-opacity-80 text-blue-300'
+              : '',
+            'hover:text-blue-100',
+          ]"
           @click="animateSelection(index)"
         >
           {{ route.name }}
@@ -35,7 +40,7 @@ export default {
     animateSelection(index) {
       gsap.to(`.navbar a:nth-child(${index + 1})`, {
         color: "#3b82f6",
-        padding: '0.5rem',
+        padding: "0.5rem",
         duration: 0.5,
         onComplete: () => {
           this.$nextTick(() => {
@@ -71,11 +76,13 @@ export default {
   background-color: #2d3748;
 }
 
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.5s;
 }
 
-.fade-enter, .fade-leave-to {
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
 }
 </style>

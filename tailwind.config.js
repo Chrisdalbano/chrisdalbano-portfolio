@@ -6,7 +6,8 @@ module.exports = {
       colors: {
         'white-cream': '#ECE6CE',
         'red-brick' : '#ED6B5B',
-        'yellow-tiger' : '#F9AC67'
+        'yellow-tiger' : '#F9AC67',
+        'blue-mistery' : '#1a1e33'
       },
     },
   },

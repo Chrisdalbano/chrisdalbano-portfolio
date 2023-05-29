@@ -78,7 +78,7 @@
         Crafting Web Wonders with
       </h2>
       <div
-        class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mx-auto w-full md:max-w-4xl"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12 mx-auto w-full md:max-w-4xl"
         ref="skillsGrid"
       >
         <div
@@ -110,9 +110,11 @@
         These are only a few of my recent websites.
       </h2>
     </section>
-    <div class="flex text-black p-2 lg:text-2xl pb-8">
+    <div
+      class="flex flex-wrap text-gray-900 justify-between px-2 sm:px-4 md:px-6 lg:px-8 lg:text-2xl pb-8"
+    >
       <div
-        class="w-full sm:w-1/2 lg:w-1/4 mx-4 rounded-lg overflow-hidden cursor-pointer"
+        class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mx-4 rounded-lg overflow-hidden cursor-pointer"
         @mouseenter="scaleProjectUp"
         @mouseleave="scaleProjectDown"
         @click="openProject('https://quizmegpt-fb.firebaseapp.com')"
@@ -136,11 +138,10 @@
       </div>
 
       <div
-        class="w-full sm:w-1/2 lg:w-1/4 mx-4 rounded-lg overflow-hidden cursor-pointer"
+        class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mx-4 rounded-lg overflow-hidden cursor-pointer"
         @mouseenter="scaleProjectUp"
         @mouseleave="scaleProjectDown"
         @click="openProject('https://moonlight-coffee-tp.firebaseapp.com')"
-        
         ref="project2"
       >
         <div
@@ -162,10 +163,14 @@
       </div>
 
       <div
-        class="w-full sm:w-1/2 lg:w-1/4 mx-4 rounded-lg overflow-hidden cursor-pointer"
+        class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mx-4 rounded-lg overflow-hidden cursor-pointer"
         @mouseenter="scaleProjectUp"
         @mouseleave="scaleProjectDown"
-        @click="openProject('https://brave-island-0fb49420f.2.azurestaticapps.net/index.html')"
+        @click="
+          openProject(
+            'https://brave-island-0fb49420f.2.azurestaticapps.net/index.html'
+          )
+        "
         ref="project3"
       >
         <div
@@ -194,11 +199,13 @@
         </router-link>
       </div>
     </div>
-    <div class="p-4 md:pl-20 lg:ml-4">
+    <div
+      class="p-4 md:pl-20 lg:ml-4 fixed bottom-4 left-4 md:static md:ml-auto md:mr-0 "
+    >
       <div
         id="back-to-top"
         @click="backToTop"
-        class="bottom-4 left-4 bg-red-brick rounded w-12 h-12 flex items-center justify-center cursor-pointer transition-opacity duration-300 opacity-0 lg:opacity-100"
+        class="shadow-black shadow-md bg-red-brick rounded w-12 h-12 flex items-center justify-center cursor-pointer transition-opacity duration-300 opacity-0 lg:opacity-100"
       >
         <span class="text-white text-2xl">&#x2191;</span>
       </div>
@@ -281,8 +288,8 @@ export default {
   },
   methods: {
     openProject(url) {
-    window.open(url, '_blank')
-  },
+      window.open(url, "_blank");
+    },
     viewMore() {
       // Navigate to the ResumeView page
       this.$router.push("/resume").then(() => {

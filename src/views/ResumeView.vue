@@ -8,7 +8,7 @@
     <h2 class="flex justify-center text-4xl md:text-5xl lg:text-6xl font-bold">
       CHRISTIAN D'ALBANO
     </h2>
-    <p class="flex justify-center mt-4 font-serif">
+    <p class="flex justify-center mt-4 font-serif text-center">
       "I firmly believe that the key to developing outstanding technologies lies
       in our ability to empathize with our client needs."
     </p>
@@ -50,7 +50,7 @@
           </div>
           <div class="mb-4 border rounded p-2">
             <h2 class="text-2xl font-bold mb-4 flex justify-center">Contact</h2>
-            <section class="flex m-4 rounded max-w-xs">
+            <section class="flex flex-col sm:flex-row m-4 rounded max-w-xs">
               <div
                 class="bg-gray-900 opacity-80 p-4 icon-container text-white-cream"
               >
@@ -119,14 +119,16 @@
           <div id="projects" class="mb-4">
             <p class="text-2xl font-bold mb-4 flex justify-center">Projects</p>
             <div class="pl-4">
-              <div class="mb-2"><a
-                class="font-bold mb-2 rounded bg-white-cream text-gray-900 w-max p-2"
-                href="https://quizmegpt-fb.firebaseapp.com/"
-                target="_blank"
-              >
-                QuizMeGPT
-              </a></div>
-              
+              <div class="mb-2">
+                <a
+                  class="font-bold mb-2 rounded bg-white-cream text-gray-900 w-max p-2"
+                  href="https://quizmegpt-fb.firebaseapp.com/"
+                  target="_blank"
+                >
+                  QuizMeGPT
+                </a>
+              </div>
+
               <p class="mb-8">
                 Artificial Intelligence based web application using the GPT-3
                 API to generate quizzes for users. The website takes and input
@@ -138,13 +140,15 @@
               </p>
             </div>
             <div class="pl-4">
-              <div class="mb-2"><a
-                class="font-bold mb-2 rounded bg-white-cream text-gray-900 w-max p-2"
-                href="https://moonlight-coffee-tp.firebaseapp.com/"
-                target="_blank"
-              >
-                MoonLight Coffee Website
-              </a></div>
+              <div class="mb-2">
+                <a
+                  class="font-bold mb-2 rounded bg-white-cream text-gray-900 w-max p-2"
+                  href="https://moonlight-coffee-tp.firebaseapp.com/"
+                  target="_blank"
+                >
+                  MoonLight Coffee Website
+                </a>
+              </div>
               <p class="mb-8">
                 Landing website for a non-real local coffee shop based in
                 Orlando, FL. Demonstrates the uses of transitions, media,
@@ -155,13 +159,15 @@
               </p>
             </div>
             <div class="pl-4">
-              <div class="mb-2"><a
-                class="font-bold mb-2 rounded bg-white-cream text-gray-900 w-max p-2"
-                href="https://brave-island-0fb49420f.2.azurestaticapps.net/index.html/"
-                target="_blank"
-              >
-               Costume Chronicles - Online Store
-              </a></div>
+              <div class="mb-2">
+                <a
+                  class="font-bold mb-2 rounded bg-white-cream text-gray-900 w-max p-2"
+                  href="https://brave-island-0fb49420f.2.azurestaticapps.net/index.html/"
+                  target="_blank"
+                >
+                  Costume Chronicles - Online Store
+                </a>
+              </div>
               <p class="mb-8">
                 Hosted, managed and deployed in Azure. Costume Chronicles is a
                 non-real ecommerce Full-stack website that uses Vanilla HTML,
@@ -177,7 +183,7 @@
             <h2 class="text-2xl font-bold mb-4 flex justify-center">
               Professional Experience
             </h2>
-            <p class="font-bold rounded w-max p-2 border">
+            <p class="font-bold rounded p-2 border overflow-auto">
               Web Application Support @ Baptist Health South Florida
             </p>
             <a
@@ -209,7 +215,7 @@
             </div>
 
             <div class="bg-red-brick rounded"></div>
-            <p class="font-bold rounded w-max p-2 border">
+            <p class="font-bold rounded p-2 border overflow-auto">
               Full Stack Developer Intern @ DoughRise
             </p>
             <p></p>
@@ -242,7 +248,7 @@
               </p>
             </div>
 
-            <p class="font-bold mb-2 rounded w-max p-2 border">
+            <p class="font-bold mb-2 rounded p-2 border overflow-auto">
               IT Support Engineer @ SNI Technology
             </p>
             <p class="mb-2">(Sep 2021 - Jun 2022)</p>
@@ -311,7 +317,7 @@ export default {
   mounted() {
     gsap.from(this.$refs.resumeSection, {
       autoAlpha: 0,
-      y: 200,
+      y: 100,
       duration: 1.7,
       ease: "expo.out",
       scrollTrigger: {

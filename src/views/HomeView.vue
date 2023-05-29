@@ -1,8 +1,8 @@
 <template>
   <!-- <div class="bg-[#3A3F58] min-h-screen"> -->
   <div>
-    <div id="floating-item-1"></div>
-    <div id="floating-item-2"></div>
+    <div id="floating-item-1" ></div>
+    <div id="floating-item-2" ></div>
     <div id="floating-item-3"></div>
     <section class="p-4 md:p-20 lg:p-32">
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold pt-32" ref="title">
@@ -103,7 +103,7 @@
       </div>
     </section>
     <section class="pl-4 md:pl-20 lg:ml-4 lg:mt-4">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mt-2">
         CHOOSE A WEB PROJECT
       </h1>
       <h2 class="text-xl md:text-2xl mt-2 mb-8">
@@ -450,7 +450,7 @@ export default {
   left: 70%;
   transform: translate(-50%, -50%);
   z-index: -2;
-  opacity: 0.9;
+
 }
 
 #floating-item-3 {
@@ -464,7 +464,7 @@ export default {
   left: 30%;
   transform: translate(-50%, -50%);
   z-index: -2;
-  opacity: 0.9;
+
 }
 
 body {
@@ -482,5 +482,12 @@ body {
 
 .button-view:hover {
   background-color: #52160b;
+}
+
+
+@media (max-width: 386px) {
+    #floating-item-2, #floating-item-3 {
+        opacity: 0.1;
+    }
 }
 </style>

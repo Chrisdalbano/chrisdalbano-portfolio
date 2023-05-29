@@ -1,11 +1,11 @@
 <template>
   <section class="mt-14">
     <h1
-      class="flex justify-center text-4xl md:text-5xl lg:text-4xl font-bold pt-32"
+      class="flex justify-center text-center text-4xl md:text-5xl lg:text-4xl font-bold pt-32"
     >
       RESUME
     </h1>
-    <h2 class="flex justify-center text-4xl md:text-5xl lg:text-6xl font-bold">
+    <h2 class="flex justify-center text-center text-4xl md:text-5xl lg:text-6xl font-bold">
       CHRISTIAN D'ALBANO
     </h2>
     <p class="flex justify-center mt-4 font-serif text-center">
@@ -49,7 +49,7 @@
             </p>
           </div>
           <div class="mb-4 border rounded p-2">
-            <h2 class="text-2xl font-bold mb-4 flex justify-center">Contact</h2>
+            <h2 class="font-bold mb-4 flex justify-center">Contact</h2>
             <section class="flex flex-col sm:flex-row m-4 rounded max-w-xs">
               <div
                 class="bg-gray-900 opacity-80 p-4 icon-container text-white-cream"
@@ -88,7 +88,7 @@
                   />
                 </a>
               </div>
-              <div class="p-4 bg-red-brick font-semibold rounded">
+              <div class="p-4 bg-red-brick font-semibold rounded text-xs md:text-lg">
                 <a href="mailto:chrisdalbano12@gmail.com" class="text-semibold"
                   >chrisdalbano12@gmail.com</a
                 >
@@ -289,15 +289,17 @@
       </div>
     </div>
   </section>
-  <div class="flex justify-center pt-4 pb-4">
-    <div
-      id="back-to-top"
-      @click="backToTop"
-      class="bottom-4 left-4 bg-red-brick rounded w-12 h-12 flex items-center justify-center cursor-pointer transition-opacity duration-300 opacity-0 lg:opacity-100"
+  <div
+      class="p-4 md:pl-20 lg:ml-4 fixed bottom-4 left-4 md:static md:ml-auto md:mr-0 "
     >
-      <span class="text-white text-2xl">&#x2191;</span>
+      <div
+        id="back-to-top"
+        @click="backToTop"
+        class="shadow-black shadow-md bg-red-brick rounded w-12 h-12 flex items-center justify-center cursor-pointer transition-opacity duration-300 opacity-80"
+      >
+        <span class="text-white text-2xl">&#x2191;</span>
+      </div>
     </div>
-  </div>
   <footer class="p-8">
     <p class="flex justify-center text-blue-300">
       Made by Christian D'Albano, fueled by Espresso shots.
@@ -322,7 +324,7 @@ export default {
       ease: "expo.out",
       scrollTrigger: {
         trigger: this.$refs.resumeSection,
-        start: "top bottom-=300",
+        start: "top bottom-=100",
         toggleActions: "play none none reverse",
       },
     });

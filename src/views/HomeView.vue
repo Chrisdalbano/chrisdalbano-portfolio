@@ -112,9 +112,10 @@
     </section>
     <div class="flex text-black p-2 lg:text-2xl pb-8">
       <div
-        class="w-full sm:w-1/2 lg:w-1/4 mx-4 rounded-lg overflow-hidden"
+        class="w-full sm:w-1/2 lg:w-1/4 mx-4 rounded-lg overflow-hidden cursor-pointer"
         @mouseenter="scaleProjectUp"
         @mouseleave="scaleProjectDown"
+        @click="openProject('https://quizmegpt-fb.firebaseapp.com')"
         ref="project1"
       >
         <div
@@ -135,9 +136,11 @@
       </div>
 
       <div
-        class="w-full sm:w-1/2 lg:w-1/4 mx-4 rounded-lg overflow-hidden"
+        class="w-full sm:w-1/2 lg:w-1/4 mx-4 rounded-lg overflow-hidden cursor-pointer"
         @mouseenter="scaleProjectUp"
         @mouseleave="scaleProjectDown"
+        @click="openProject('https://moonlight-coffee-tp.firebaseapp.com')"
+        
         ref="project2"
       >
         <div
@@ -159,9 +162,10 @@
       </div>
 
       <div
-        class="w-full sm:w-1/2 lg:w-1/4 mx-4 rounded-lg overflow-hidden"
+        class="w-full sm:w-1/2 lg:w-1/4 mx-4 rounded-lg overflow-hidden cursor-pointer"
         @mouseenter="scaleProjectUp"
         @mouseleave="scaleProjectDown"
+        @click="openProject('https://brave-island-0fb49420f.2.azurestaticapps.net/index.html')"
         ref="project3"
       >
         <div
@@ -182,9 +186,12 @@
         </div>
       </div>
       <div class="flex justify-center mt-8">
-        <button class="button-view rounded bg-red-brick text-white text-  xl font-bold mt-32 mb-32">
+        <router-link
+          to="/resume#projects"
+          class="button-view rounded bg-red-brick text-white text- xl font-bold mt-32 mb-32"
+        >
           VIEW MORE
-        </button>
+        </router-link>
       </div>
     </div>
     <div class="p-4 md:pl-20 lg:ml-4">
@@ -273,6 +280,28 @@ export default {
     ScrollTrigger.getAll().forEach((ST) => ST.kill());
   },
   methods: {
+    openProject(url) {
+    window.open(url, '_blank')
+  },
+    viewMore() {
+      // Navigate to the ResumeView page
+      this.$router.push("/resume").then(() => {
+        // Wait until next render cycle to scroll
+        this.$nextTick(() => {
+          // Scroll to the projects section
+          const resumeViewComponent = this.$parent.$children.find(
+            (component) => component.$options.name === "ResumeView"
+          );
+          const projectsSectionElement =
+            resumeViewComponent.$refs.projectsSection;
+          gsap.to(window, {
+            duration: 1,
+            scrollTo: { y: projectsSectionElement.offsetTop, autoKill: false },
+            ease: "power2.out",
+          });
+        });
+      });
+    },
     handleMouseMove(e) {
       this.mouseX = e.clientX;
       this.mouseY = e.clientY;
@@ -438,7 +467,7 @@ body {
 .button-view {
   display: inline-block;
   padding: 10px 20px;
-  
+
   text-align: center;
 
   transition: all 0.3s ease;
@@ -446,6 +475,5 @@ body {
 
 .button-view:hover {
   background-color: #52160b;
- 
 }
 </style>

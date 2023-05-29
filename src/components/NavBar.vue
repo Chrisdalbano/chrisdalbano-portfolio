@@ -17,6 +17,8 @@
         >
           {{ route.name }}
         </router-link>
+        
+
       </div>
     </nav>
   </transition>
@@ -24,6 +26,10 @@
 
 <script>
 import { gsap } from "gsap";
+
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollToPlugin);
 export default {
   name: "NavBar",
   data() {
@@ -32,11 +38,21 @@ export default {
       routes: [
         { name: "Home", path: "/" },
         { name: "Resume", path: "/resume" },
-        { name: "Works", path: "/works" },
+        // { name: "Works", path: "/works" },
       ],
     };
   },
+  watch: {
+    $route() {
+      gsap.to(window, {
+        duration: 0.2,
+        scrollTo: { y: 0, autoKill: false },
+        ease: 'power2.out'
+      });
+    }
+  },
   methods: {
+    
     animateSelection(index) {
       gsap.to(`.navbar a:nth-child(${index + 1})`, {
         color: "#3b82f6",
@@ -85,4 +101,6 @@ export default {
 .fade-leave-to {
   opacity: 0;
 }
+
+
 </style>

@@ -19,6 +19,11 @@ const routes = [
     name: "resume",
     component: ResumeView,
   },
+  {
+    path: "/works",
+    name: "works",
+    component: WorksView,
+  },
 ];
 
 const router = createRouter({

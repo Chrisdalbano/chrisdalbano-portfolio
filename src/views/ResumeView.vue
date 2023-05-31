@@ -5,7 +5,9 @@
     >
       RESUME
     </h1>
-    <h2 class="flex justify-center text-center text-4xl md:text-5xl lg:text-6xl font-bold">
+    <h2
+      class="flex justify-center text-center text-4xl md:text-5xl lg:text-6xl font-bold"
+    >
       CHRISTIAN D'ALBANO
     </h2>
     <p class="flex justify-center mt-4 font-serif text-center">
@@ -25,8 +27,8 @@
       </a>
     </div>
 
-    <div class="flex justify-center p-4 text-xl">
-      <div class="w-full lg:w-1/2">
+    <div class="flex justify-center p-4 md:text-xl sm:text-base">
+      <div class="w-full lg:w-2/3">
         <div
           class="bg-blue-mistery shadow-black shadow-2xl rounded-2xl px-8 pt-6 pb-8 mb-4"
           ref="resumeSection"
@@ -34,18 +36,15 @@
           <div class="mb-4">
             <h2 class="flex justify-center text-2xl font-bold mb-4">Insight</h2>
             <p class="m">
-              Experienced web developer, with a focus on front-end development,
-              notably in Vue.js and React environments. Proven ability to build
+              I am a developer with a focus on front-end development, notably in
+              Vue.js and other JS environments. I have proven ability to build
               and optimize responsive web applications for the efficient and
-              effective presentation of business content. Looking to bring my
-              expertise in software development to a dynamic team.
+              effective presentation of business content. Also posses skills in
+              Backend technologies such as Node.js, Django and Firebase.
             </p>
-            <p>
-              Demonstrated ability to develop, troubleshoot issues, manage user
-              accounts, and understand client necessities to implement advanced
-              and appropiate tech solutions. Proven success in enhancing the
-              user experience through efficient, accurate, and accessible web
-              applications for diverse audiences.
+            <p class="mt-2">
+              Currently, I am looking to bring my experience in software and/or
+              web development to a dynamic team.
             </p>
           </div>
           <div class="mb-4 border rounded p-2">
@@ -88,7 +87,9 @@
                   />
                 </a>
               </div>
-              <div class="p-4 bg-red-brick font-semibold rounded text-xs md:text-lg">
+              <div
+                class="p-4 bg-red-brick font-semibold rounded text-xs md:text-lg"
+              >
                 <a href="mailto:chrisdalbano12@gmail.com" class="text-semibold"
                   >chrisdalbano12@gmail.com</a
                 >
@@ -101,16 +102,16 @@
               Technical Skills
             </h2>
             <p>
-              • Mastered JavaScript Frameworks such as Vue.js and React,
+              • Manipulated JavaScript Frameworks such as Vue.js and React,
               creating scalable, maintainable, and efficient websites.
-              Demonstrated proficiency with numerous libraries and expertise in
-              API manipulation for third-party integrations.
+              Demonstrated proficiency with numerous libraries and API
+              manipulation for third-party integrations.
             </p>
-            <p>
+            <p class="mt-2">
               • Proficient in C#, Java, JavaScript, and Python programming
               languages, underscoring versatility and technical acumen.
             </p>
-            <p>
+            <p class="mt-2">
               • Familiar with Agile software development methodologies,
               highlighting comprehension of team dynamics and exceptional
               inter-team communication skills.
@@ -131,11 +132,8 @@
 
               <p class="mb-8">
                 Artificial Intelligence based web application using the GPT-3
-                API to generate quizzes for users. The website takes and input
-                from the users to send a request to the gpt-turbo model and once
-                this one generates the prompt, the application will extract with
-                regex algorithms to build a fun customizable quiz. Utilized
-                Vue.js for front-end, and Firebase / Node.js for backend and
+                API to generate quizzes for users. Utilized Vue.js for
+                front-end, and Firebase / Node.js for backend and
                 authentication.
               </p>
             </div>
@@ -150,12 +148,11 @@
                 </a>
               </div>
               <p class="mb-8">
-                Landing website for a non-real local coffee shop based in
-                Orlando, FL. Demonstrates the uses of transitions, media,
-                responsiveness and proper UI/UX to showcase the abilities to
-                build an entire website for a company. In this case, a Coffee
-                Shop. Build with Vue.js, Tailwind, Animate.js and deployed in
-                Firebase for hosting and escalability.
+                Landing website that demonstrates the uses of transitions,
+                media, responsive design to showcase my abilities of UX for
+                small business. In this case, a Coffee Shop. Build with Vue.js,
+                Tailwind, Animate.js and deployed in Firebase for hosting and
+                escalability.
               </p>
             </div>
             <div class="pl-4">
@@ -168,14 +165,16 @@
                   Costume Chronicles - Online Store
                 </a>
               </div>
-              <p class="mb-8">
+              <p class="">
                 Hosted, managed and deployed in Azure. Costume Chronicles is a
-                non-real ecommerce Full-stack website that uses Vanilla HTML,
+                non-real ecommerce Full-Stack website that uses Vanilla HTML,
                 CSS and JavaScript for the front-end to showcase a full
-                ecommerce website where the items are pulled from the backend
-                and the users can search, filter and buy their items. The
-                backend is done in Azure where a MySQL Flexible Server is being
-                hosted.
+                ecommerce website.
+              </p>
+              <p
+                class="flex justify-center text-center pt-10 pb-10 font-bold text-red-brick"
+              >
+                You can check out more about my projects on my 'Works' tab.
               </p>
             </div>
           </div>
@@ -194,23 +193,23 @@
             >
             <p class="mb-2">(Jun 2022 - Present)</p>
             <div class="pl-4">
-              <p>
-                • Streamlined COVID-19 vaccination event processes by automating
-                system administration tasks using Python scripts, enhancing
-                communication between EHR systems and healthcare staff.
+              <p class="mb-2">
+                • Provided robust technical support for the patient portal web
+                application, initially built with Okta and later transitioned
+                into a Flutter web application, for end-users, internal staff,
+                and development teams.
               </p>
-              <p>
-                • Managed Microsoft Azure cloud infrastructure, providing high
-                availability for essential healthcare services and applications
-                during COVID-19 vaccination events in a HIPAA-compliant setting,
-                handling user management, security updates, and performance
-                monitoring to support vaccination event operations.
+              <p class="mb-2">
+                • Managed and resolved an average of 20 daily tickets pertaining
+                to the web application using ServiceNow, escalating complex
+                development issues to senior team members when necessary, and
+                providing comprehensive feedback on incidents and potential
+                solutions.
               </p>
               <p class="mb-8">
-                • Collaborated with cross-functional teams, including healthcare
-                staff and volunteers, to troubleshoot and resolve technical
-                issues during vaccination events, applying Regex and TCL for
-                pattern analysis and problem-solving in healthcare IT scenarios.
+                • Assisted the development team in troubleshooting and resolving
+                issues with the patient portal application, utilizing JavaScript
+                and Dart for bug identification and function debugging.
               </p>
             </div>
 
@@ -227,13 +226,13 @@
             >
             <p class="mb-2">(Oct 2022 - Jan 2023)</p>
             <div class="pl-4">
-              <p>
+              <p class="mb-2">
                 • Applied front and backend knowledge using the JavaScript
                 framework Vue.js to build and implement the designs and
                 functionality of the web application DoughRise, showcasing
                 adaptability and versatility relevant to IT practices.
               </p>
-              <p>
+              <p class="mb-2">
                 • Implemented continuous integration and deployment (CI/CD)
                 processes using Git and DevOps practices to improve software
                 delivery speed and reliability, highlighting experience in
@@ -253,23 +252,23 @@
             </p>
             <p class="mb-2">(Sep 2021 - Jun 2022)</p>
             <div class="pl-4">
-              <p>
-                • Provided robust technical support for the patient portal web
-                application, initially built with Okta and later transitioned
-                into a Flutter web application, for end-users, internal staff,
-                and development teams.
+              <p class="mb-2">
+                • Streamlined COVID-19 vaccination event processes by automating
+                system administration tasks using Python scripts, enhancing
+                communication between EHR systems and healthcare staff.
               </p>
-              <p>
-                • Managed and resolved an average of 20 daily tickets pertaining
-                to the web application using ServiceNow, escalating complex
-                development issues to senior team members when necessary, and
-                providing comprehensive feedback on incidents and potential
-                solutions.
+              <p class="mb-2">
+                • Managed Microsoft Azure cloud infrastructure, providing high
+                availability for essential healthcare services and applications
+                during COVID-19 vaccination events in a HIPAA-compliant setting,
+                handling user management, security updates, and performance
+                monitoring to support vaccination event operations.
               </p>
               <p class="mb-8">
-                • Assisted the development team in troubleshooting and resolving
-                issues with the patient portal application, utilizing JavaScript
-                and Dart for bug identification and function debugging.
+                • Collaborated with cross-functional teams, including healthcare
+                staff and volunteers, to troubleshoot and resolve technical
+                issues during vaccination events, applying Regex and TCL for
+                pattern analysis and problem-solving in healthcare IT scenarios.
               </p>
             </div>
           </div>
@@ -290,16 +289,16 @@
     </div>
   </section>
   <div
-      class="p-4 md:pl-20 lg:ml-4 fixed bottom-4 left-4 md:static md:ml-auto md:mr-0 "
+    class="p-4 md:pl-20 lg:ml-4 fixed bottom-4 left-4 md:static md:ml-auto md:mr-0"
+  >
+    <div
+      id="back-to-top"
+      @click="backToTop"
+      class="shadow-black shadow-md bg-red-brick rounded w-12 h-12 flex items-center justify-center cursor-pointer transition-opacity duration-300 opacity-80"
     >
-      <div
-        id="back-to-top"
-        @click="backToTop"
-        class="shadow-black shadow-md bg-red-brick rounded w-12 h-12 flex items-center justify-center cursor-pointer transition-opacity duration-300 opacity-80"
-      >
-        <span class="text-white text-2xl">&#x2191;</span>
-      </div>
+      <span class="text-white text-2xl">&#x2191;</span>
     </div>
+  </div>
   <footer class="p-8">
     <p class="flex justify-center text-blue-300">
       Made by Christian D'Albano, fueled by Espresso shots.

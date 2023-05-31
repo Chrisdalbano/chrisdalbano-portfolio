@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <nav class="navbar" :class="{ 'bg-gray-800': isScrolled }">
+    <nav class="navbar bg-opacity-80" :class="{ 'bg-gray-800': isScrolled }">
       <div class="space-x-4 md:space-x-6 pl-4 pt-2 pb-2">
         <router-link
           v-for="(route, index) in routes"
@@ -9,7 +9,7 @@
           class="text-lg md:text-xl p-2 rounded hover:bg-gray-800 hover:bg-opacity-50 transition-all duration-300 ease-in-out"
           :class="[
             $route.path === route.path
-              ? 'bg-gray-800 bg-opacity-80 text-blue-300'
+              ? 'bg-gray-800 bg-opacity-100 opacity-100 text-blue-300'
               : '',
             'hover:text-blue-100',
           ]"
@@ -37,8 +37,9 @@ export default {
       isScrolled: false,
       routes: [
         { name: "Home", path: "/" },
+        { name: "Works", path: "/works" },
         { name: "Resume", path: "/resume" },
-        // { name: "Works", path: "/works" },
+        
       ],
     };
   },
@@ -90,6 +91,7 @@ export default {
 
 .navbar.bg-gray-800 {
   background-color: #2d3748;
+  
 }
 
 .fade-enter-active,

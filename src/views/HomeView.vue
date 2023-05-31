@@ -16,7 +16,7 @@
         From creative ideas to responsive and useful web applications, my love
         for development is deeply influenced by my passion to turn ideas into
         functional matter. I enjoy breaking down problems to bring life
-        impactful, user-based websites pixel by pixel, request by you got it.
+        impactful, user-based websites pixel by pixel.
         Let’s use this momentum.
       </p>
 
@@ -100,6 +100,15 @@
           <p class="text-base text-gray-900">Express</p>
           <p class="text-base text-gray-900">Firebase</p>
         </div>
+        <div
+          class="skills-section bg-gray-500 p-4 rounded shadow-md font-semibold"
+        >
+          <h3 class="text-2xl font-bold mb-4 text-gray-900">Other 'Tools'</h3>
+          <p class="text-base text-gray-900">Coffee</p>
+          <p class="text-base text-gray-900">Love</p>
+          <p class="text-base text-gray-900">Passion</p>
+          <p class="text-base text-gray-900">Git 😁</p>
+        </div>
       </div>
     </section>
     <section class="pl-4 md:pl-20 lg:ml-4 lg:mt-4">
@@ -114,7 +123,7 @@
       class="flex flex-wrap text-gray-900 justify-between px-2 sm:px-4 md:px-6 lg:px-8 lg:text-2xl pb-8"
     >
       <div
-        class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mx-4 rounded-lg overflow-hidden cursor-pointer"
+        class="w-full sm:w-1/2  lg:w-1/4 mx-4 rounded-lg overflow-hidden cursor-pointer"
         @mouseenter="scaleProjectUp"
         @mouseleave="scaleProjectDown"
         @click="openProject('https://quizmegpt-fb.firebaseapp.com')"
@@ -138,7 +147,7 @@
       </div>
 
       <div
-        class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mx-4 rounded-lg overflow-hidden cursor-pointer"
+        class="w-full sm:w-1/2 lg:w-1/4 mx-4 rounded-lg overflow-hidden cursor-pointer"
         @mouseenter="scaleProjectUp"
         @mouseleave="scaleProjectDown"
         @click="openProject('https://moonlight-coffee-tp.firebaseapp.com')"
@@ -163,7 +172,7 @@
       </div>
 
       <div
-        class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 mx-4 rounded-lg overflow-hidden cursor-pointer"
+        class="w-full sm:w-1/2 lg:w-1/4 mx-4 rounded-lg overflow-hidden cursor-pointer"
         @mouseenter="scaleProjectUp"
         @mouseleave="scaleProjectDown"
         @click="
@@ -190,15 +199,16 @@
           </p>
         </div>
       </div>
-      <div class="flex justify-center mt-8">
+      
+    </div>
+    <div class="flex justify-center">
         <router-link
-          to="/resume#projects"
-          class="button-view rounded bg-red-brick text-white text- xl font-bold mt-32 mb-32"
+          to="/works#projects"
+          class="button-view rounded bg-red-brick text-white text-xl font-bold "
         >
           VIEW MORE
         </router-link>
       </div>
-    </div>
     <div
       class="p-4 md:pl-20 lg:ml-4 fixed bottom-4 left-4 md:static md:ml-auto md:mr-0 "
     >

@@ -10,9 +10,9 @@
       (yes, I work)
     </p>
 
-    <div id="projects" class="grid grid-cols-1 md:grid-cols-2 gap-8 px-16 pt-10">
+    <div id="projects" class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-16 pt-10">
       <div
-        class="rounded overflow-hidden shadow-lg p-6 bg-white-cream text-gray-800"
+        class="rounded overflow-hidden shadow-lg p-6 bg-white-cream text-gray-800 w-full md:w-auto"
       >
         <h3 class="font-bold text-2xl">QuizMEGPT</h3>
         <h3 class="font-bold text-base mb-2 text-gray-700">Web Application</h3>
@@ -50,7 +50,7 @@
       </div>
 
       <div
-        class="rounded overflow-hidden shadow-lg p-6 bg-white-cream text-gray-800"
+        class="rounded overflow-hidden shadow-lg p-6 bg-white-cream text-gray-800 w-full md:w-auto"
       >
         <h3 class="font-bold text-2xl">Moonlight Coffe</h3>
         <h3 class="font-bold text-base mb-2 text-gray-700">Landing website</h3>
@@ -86,7 +86,7 @@
       </div>
 
       <div
-        class="rounded overflow-hidden shadow-lg p-6 bg-white-cream text-gray-800"
+        class="rounded overflow-hidden shadow-lg p-6 bg-white-cream text-gray-800 w-full md:w-auto"
       >
         <h3 class="font-bold text-2xl">Costume Chronicles</h3>
         <h3 class="font-bold text-base mb-2 text-gray-700">E-Commerce</h3>
@@ -125,7 +125,7 @@
       </div>
 
       <div
-        class="rounded overflow-hidden shadow-lg p-6 bg-white-cream text-gray-800"
+        class="rounded overflow-hidden shadow-lg p-6 bg-white-cream text-gray-800 w-full md:w-auto"
       >
         <h3 class="font-bold text-2xl">Simply Python RPG</h3>
         <h3 class="font-bold text-base mb-2 text-gray-700">
@@ -152,10 +152,44 @@
           >
         </button>
       </div>
+      
     </div>
+    <div class="flex justify-center">
+        <router-link
+          to="/resume"
+          class="button-view rounded-md bg-red-brick text-white text-xl font-bold "
+        >
+          VIEW RESUME
+        </router-link>
+      </div>
   </section>
+  <footer class="p-8">
+      <p class="flex justify-center text-blue-300">
+        Made by Christian D'Albano, fueled by Espresso shots.
+      </p>
+    </footer>
 </template>
-<script></script>
+<script>
+import { gsap } from 'gsap';
+
+export default {
+  mounted() {
+    this.animateCards();
+  },
+  methods: {
+    animateCards() {
+      const cards = document.querySelectorAll('.rounded');
+      cards.forEach((card, index) => {
+        gsap.fromTo(
+          card,
+          { x: '-100%', opacity: 0 },
+          { x: '0%', opacity: 1, duration: 0.5, delay: index * 0.18 }
+        );
+      });
+    },
+  },
+};
+</script>
 <style scoped>
 .tech-item {
   background-color: #ffffff; /* bg-gray-100 */

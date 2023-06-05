@@ -103,11 +103,11 @@
         <div
           class="skills-section bg-gray-500 p-4 rounded shadow-md font-semibold"
         >
-          <h3 class="text-2xl font-bold mb-4 text-gray-900">Other 'Tools'</h3>
-          <p class="text-base text-gray-900">Coffee</p>
-          <p class="text-base text-gray-900">Love</p>
-          <p class="text-base text-gray-900">Passion</p>
-          <p class="text-base text-gray-900">Git 😁</p>
+          <h3 class="text-2xl font-bold mb-4 text-gray-900">Building Tools</h3>
+          <p class="text-base text-gray-900">Git/Github </p>
+          <p class="text-base text-gray-900">Photoshop</p>
+          <p class="text-base text-gray-900">Figma</p>
+          <p class="text-base text-gray-900">VSCode</p>
         </div>
       </div>
     </section>

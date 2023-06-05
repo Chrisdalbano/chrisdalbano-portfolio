@@ -182,8 +182,8 @@ export default {
       cards.forEach((card, index) => {
         gsap.fromTo(
           card,
-          { x: '-100%', opacity: 0 },
-          { x: '0%', opacity: 1, duration: 0.5, delay: index * 0.18 }
+          { x: '-50%', opacity: 0.2 },
+          { x: '0%', opacity: 1, duration: 0.2, delay: index * 0.02 }
         );
       });
     },

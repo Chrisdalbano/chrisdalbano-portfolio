@@ -178,7 +178,7 @@ export default {
   },
   methods: {
     animateCards() {
-      const cards = document.querySelectorAll('.rounded');
+      const cards = document.querySelectorAll('.overflow-hidden');
       cards.forEach((card, index) => {
         gsap.fromTo(
           card,

@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import HomeView from "@/views/HomeView.vue";
 import WorksView from "@/views/WorksView.vue";
 import ResumeView from "@/views/ResumeView.vue";
+import QMGPTViewVue from "@/views/QMGPTView.vue";
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     name: "works",
     component: WorksView,
   },
+  {
+    path: "/quizmegpt",
+    name: "quizmegpt",
+    component: QMGPTViewVue,
+  }
 ];
 
 const router = createRouter({

@@ -17,8 +17,12 @@
         >
           {{ route.name }}
         </router-link>
-        
+      </div>l.
 
+      <div
+        class="bg-red-brick h-12 w-12 rounded text-center text-4xl hover:bg-red-950" 
+      > <a target="_blank" href="mailto:chrisdalbano12@gmail.com"><font-awesome-icon icon="envelope" /></a>
+        
       </div>
     </nav>
   </transition>
@@ -39,7 +43,6 @@ export default {
         { name: "Home", path: "/" },
         { name: "Works", path: "/works" },
         { name: "Resume", path: "/resume" },
-        
       ],
     };
   },
@@ -48,12 +51,11 @@ export default {
       gsap.to(window, {
         duration: 0.2,
         scrollTo: { y: 0, autoKill: false },
-        ease: 'power2.out'
+        ease: "power2.out",
       });
-    }
+    },
   },
   methods: {
-    
     animateSelection(index) {
       gsap.to(`.navbar a:nth-child(${index + 1})`, {
         color: "#3b82f6",
@@ -91,7 +93,6 @@ export default {
 
 .navbar.bg-gray-800 {
   background-color: #2d3748;
-  
 }
 
 .fade-enter-active,
@@ -104,5 +105,8 @@ export default {
   opacity: 0;
 }
 
-
+.bg-red-brick {
+  transition: 0.2s;
+  cursor: pointer;
+}
 </style>

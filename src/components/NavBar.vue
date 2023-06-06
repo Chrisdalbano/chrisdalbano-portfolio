@@ -17,12 +17,14 @@
         >
           {{ route.name }}
         </router-link>
-      </div>l.
+      </div>
 
       <div
-        class="bg-red-brick h-12 w-12 rounded text-center text-4xl hover:bg-red-950" 
-      > <a target="_blank" href="mailto:chrisdalbano12@gmail.com"><font-awesome-icon icon="envelope" /></a>
-        
+        class="bg-red-brick h-12 w-12 rounded text-center text-4xl hover:bg-red-950"
+      >
+        <a target="_blank" href="mailto:chrisdalbano12@gmail.com"
+          ><font-awesome-icon icon="envelope"
+        /></a>
       </div>
     </nav>
   </transition>

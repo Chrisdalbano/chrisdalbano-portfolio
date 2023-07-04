@@ -1,23 +1,22 @@
 <template>
   <!-- <div class="bg-[#3A3F58] min-h-screen"> -->
   <div>
-    <div id="floating-item-1" ></div>
-    <div id="floating-item-2" ></div>
+    <div id="floating-item-1"></div>
+    <div id="floating-item-2"></div>
     <div id="floating-item-3"></div>
     <section class="p-4 md:p-20 lg:p-32">
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold pt-32" ref="title">
         CHRISTIAN D'ALBANO
       </h1>
       <h2 class="text-xl md:text-2xl mt-2" ref="subtitle">
-        is a Web Developer based in Orlando, FL
+        is a Developer based in Orlando, FL
       </h2>
 
       <p class="mt-8 text-lg max-w-4xl">
         From creative ideas to responsive and useful web applications, my love
         for development is deeply influenced by my passion to turn ideas into
         functional matter. I enjoy breaking down problems to bring life
-        impactful, user-based websites pixel by pixel.
-        Let’s use this momentum.
+        impactful, user-based websites pixel by pixel. Let’s use this momentum.
       </p>
 
       <button
@@ -85,11 +84,12 @@
           class="skills-section bg-yellow-tiger p-4 rounded shadow-md font-semibold"
         >
           <h3 class="text-2xl font-bold mb-4 text-gray-900">Front-End</h3>
+          <p class="text-base text-gray-900">HTML5</p>
           <p class="text-base text-gray-900">JavaScript</p>
           <p class="text-base text-gray-900">TypeScript</p>
           <p class="text-base text-gray-900">Vue.js</p>
           <p class="text-base text-gray-900">Tailwind</p>
-          <p class="text-base text-gray-900">Sass</p>
+          <p class="text-base text-gray-900">CSS/SASS</p>
         </div>
         <div
           class="skills-section bg-red-brick p-4 rounded shadow-md font-semibold"
@@ -99,15 +99,18 @@
           <p class="text-base text-gray-900">MySQL</p>
           <p class="text-base text-gray-900">Express</p>
           <p class="text-base text-gray-900">Firebase</p>
+          <p class="text-base text-gray-900">Azure</p>
+          <p class="text-base text-gray-900">Flask</p>
         </div>
         <div
           class="skills-section bg-gray-500 p-4 rounded shadow-md font-semibold"
         >
           <h3 class="text-2xl font-bold mb-4 text-gray-900">Building Tools</h3>
-          <p class="text-base text-gray-900">Git/Github </p>
+          <p class="text-base text-gray-900">Git/Github</p>
           <p class="text-base text-gray-900">Photoshop</p>
           <p class="text-base text-gray-900">Figma</p>
           <p class="text-base text-gray-900">VSCode</p>
+          <p class="text-base text-gray-900">AI</p>
         </div>
       </div>
     </section>
@@ -119,11 +122,13 @@
         These are only a few of my recent websites.
       </h2>
     </section>
+
     <div
-      class="flex flex-wrap text-gray-900 justify-between px-2 sm:px-4 md:px-6 lg:px-8 lg:text-2xl pb-8"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-gray-900 px-2 sm:px-4 md:px-6 lg:px-8 lg:text-2xl pb-8"
     >
+      
       <div
-        class="w-full sm:w-1/2  lg:w-1/4 mx-4 rounded-lg overflow-hidden cursor-pointer"
+        class="rounded-lg overflow-hidden cursor-pointer"
         @mouseenter="scaleProjectUp"
         @mouseleave="scaleProjectDown"
         @click="openProject('https://quizmegpt-fb.firebaseapp.com')"
@@ -138,16 +143,16 @@
         <div
           class="h-48 bg-white-cream flex items-center justify-center flex-col p-4"
         >
-          <p class="text-center font-semibold">QuizMeGPT</p>
+          <p class="text-center text-gray-800 font-bold">QuizMeGPT</p>
           <p class="text-center text-base mt-2">
-            An AI based quiz generator web application, using OpenAI's API
-            chat-gpt-turbo.
+            An AI based Quiz Generator Web Application, using OpenAI's API
+            ChatGPT, Firebase and lots of regex to generate interesting quizzes based on user prompt.
           </p>
         </div>
       </div>
 
       <div
-        class="w-full sm:w-1/2 lg:w-1/4 mx-4 rounded-lg overflow-hidden cursor-pointer"
+        class="rounded-lg overflow-hidden cursor-pointer"
         @mouseenter="scaleProjectUp"
         @mouseleave="scaleProjectDown"
         @click="openProject('https://moonlight-coffee-tp.firebaseapp.com')"
@@ -163,7 +168,7 @@
         <div
           class="h-48 bg-white-cream flex items-center justify-center flex-col p-4"
         >
-          <p class="text-center font-semibold">Moonlight Coffee</p>
+          <p class="text-center text-gray-800 font-bold">Moonlight Coffee</p>
           <p class="text-center text-base mt-2">
             A beautiful responsive specialty coffee shop website with some cool
             animations and interesting items.
@@ -172,7 +177,7 @@
       </div>
 
       <div
-        class="w-full sm:w-1/2 lg:w-1/4 mx-4 rounded-lg overflow-hidden cursor-pointer"
+        class="rounded-lg overflow-hidden cursor-pointer"
         @mouseenter="scaleProjectUp"
         @mouseleave="scaleProjectDown"
         @click="
@@ -192,25 +197,48 @@
         <div
           class="h-48 bg-white-cream flex items-center justify-center flex-col p-4"
         >
-          <p class="text-center font-semibold">Costume Chronicles</p>
+          <p class="text-center text-gray-800 font-bold">Costume Chronicles</p>
           <p class="text-center text-base mt-2">
             An electronic store website dedicated to sell costumes, with cart
-            features and sorting searches.
+            features and sorting searches. Deployed in Azure.
           </p>
         </div>
       </div>
-      
+      <div
+        class="rounded-lg overflow-hidden cursor-pointer"
+        @mouseenter="scaleProjectUp"
+        @mouseleave="scaleProjectDown"
+        @click="openProject('https://mtgen-host.web.app/#/')"
+        ref="project0"
+      >
+        <div
+          class="bg-cover h-64"
+          :style="{
+            backgroundImage:
+              'url(' + require('@/assets/magicthegenpic.jpg') + ')',
+          }"
+        ></div>
+        <div
+          class="h-48 bg-white-cream flex items-center justify-center flex-col p-4"
+        >
+          <p class="text-center text-gray-800 font-bold">MTGen</p>
+          <p class="text-center text-base mt-2">
+            An AI powered Web Application by ChatGPT and DALL-E APIs in Flask to generate
+            custom Magic The Gathering cards based on prompts. Deployed on Azure.
+          </p>
+        </div>
+      </div>
     </div>
     <div class="flex justify-center">
-        <router-link
-          to="/works#projects"
-          class="button-view rounded bg-red-brick text-white text-xl font-bold "
-        >
-          VIEW MORE
-        </router-link>
-      </div>
+      <router-link
+        to="/works#projects"
+        class="button-view rounded bg-red-brick text-white text-xl font-bold"
+      >
+        VIEW MORE
+      </router-link>
+    </div>
     <div
-      class="p-4 md:pl-20 lg:ml-4 fixed bottom-4 left-4 md:static md:ml-auto md:mr-0 "
+      class="p-4 md:pl-20 lg:ml-4 fixed bottom-4 left-4 md:static md:ml-auto md:mr-0"
     >
       <div
         id="back-to-top"
@@ -257,6 +285,7 @@ export default {
     this.$nextTick(() => {
       // your animation code here
       const projectElements = [
+        this.$refs.project0,
         this.$refs.project1,
         this.$refs.project2,
         this.$refs.project3,
@@ -460,7 +489,6 @@ export default {
   left: 70%;
   transform: translate(-50%, -50%);
   z-index: -2;
-
 }
 
 #floating-item-3 {
@@ -474,7 +502,6 @@ export default {
   left: 30%;
   transform: translate(-50%, -50%);
   z-index: -2;
-
 }
 
 body {
@@ -494,10 +521,10 @@ body {
   background-color: #52160b;
 }
 
-
 @media (max-width: 386px) {
-    #floating-item-2, #floating-item-3 {
-        opacity: 0.1;
-    }
+  #floating-item-2,
+  #floating-item-3 {
+    opacity: 0.1;
+  }
 }
 </style>

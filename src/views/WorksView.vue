@@ -1,23 +1,55 @@
 <template>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <section class="mt-14">
-    <h1 class="flex justify-center text-center text-2xl md:text-3xl lg:text-4xl font-bold pt-32">
+    <h1
+      class="flex justify-center text-center text-2xl md:text-3xl lg:text-4xl font-bold pt-32"
+    >
       CHRISTIAN D'ALBANO
     </h1>
-    <h2 class="flex justify-center text-center text-4xl md:text-5xl lg:text-6xl font-bold">
+    <h2
+      class="flex justify-center text-center text-4xl md:text-5xl lg:text-6xl font-bold"
+    >
       WORKS
     </h2>
-    <p class="flex justify-center text-center text-xs mt-2 transform -rotate-6 opacity-60">
+    <p
+      class="flex justify-center text-center text-xs mt-2 transform -rotate-6 opacity-60"
+    >
       (yes, I work)
     </p>
-
-    <div id="projects" class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-16 pt-10">
+    <div class="sm:inline-block lg:flex mt-8 mb-4 justify-center space-x-4">
+      <div class="ml-6 lg:ml-2 mb-4">
+        <img
+          :src="require('@/assets/birdmoment.jpg')"
+          alt="Bird Moment"
+          class="w-96 h-auto"
+        />
+        <p class="text-sm text-center opacity-80">Photo by me in the Lakefront Beach, St. Cloud, FL</p>
+      </div>
+      <div class="text-xl">
+        <h2 class="text-center flex justify-center font-serif">
+          'Like a bird on the post'
+        </h2>
+        <p class="flex justify-center max-w-sm">
+          Ready to soar into new realms of discovery and innovation, I am a
+          driven and curious developer with an interesting portfolio of projects. My
+          passion lies in finding unique solutions to complex problems, and
+          creating fantastic user experiences, whether it's a dynamic web
+          application or a high-performance software system.
+        </p>
+      </div>
+    </div>
+    
+    <div
+      id="projects"
+      class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-16 pt-4"
+    >
       <div
         class="rounded overflow-hidden shadow-lg p-6 bg-white-cream text-gray-800 w-full md:w-auto"
       >
         <h3 class="font-bold text-2xl">QuizMEGPT</h3>
         <h3 class="font-bold text-base mb-2 text-gray-700">Web Application</h3>
         <p class="text-base mb-4">
-          QuizMEGPT is An AI-based web application using the GPT-3 API to
+          QuizMEGPT is An AI-based web application using the GPT-Turbo API to
           generate personalized quizzes for users based on their prompt. The web
           application also allows the user to register to review their past
           quizzes and get points to level up for motivation. Built using Vue.js,
@@ -32,6 +64,7 @@
           <div class="tech-item">CSS3</div>
           <div class="tech-item">Vuex</div>
           <div class="tech-item">Firebase</div>
+          <div class="tech-item">GPT-Turbo</div>
         </div>
         <button
           class="mt-4 bg-red-brick hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
@@ -79,7 +112,50 @@
         <button
           class="mt-4 ml-4 bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
         >
-          <a href="https://github.com/Chrisdalbano/moonlight-coffee-web" target="_blank"
+          <a
+            href="https://github.com/Chrisdalbano/moonlight-coffee-web"
+            target="_blank"
+            >GitHub Repo</a
+          >
+        </button>
+      </div>
+
+      <div
+        class="rounded overflow-hidden shadow-lg p-6 bg-white-cream text-gray-800 w-full md:w-auto"
+      >
+        <h3 class="font-bold text-2xl">MTGen (Magic The Generator)</h3>
+        <h3 class="font-bold text-base mb-2 text-gray-700">Web Application</h3>
+        <p class="text-base mb-4">
+          Web-based Magic: The Gathering (MTG) card generator that leverages AI
+          technology to create new and unique MTG cards. Users input a theme or
+          a prompt, and the application generates a complete card that fits the
+          given theme. The result includes the card's name, cost, type, power,
+          toughness, abilities, and art. The Flask API its being maintained in
+          an Azure Cloud Web Server
+          <b class="text-red-700 opacity-60">Requires an OpenAI API Token</b>.
+        </p>
+        <h3 class="font-bold text-base mb-2 text-gray-700">Tech used:</h3>
+        <div class="flex flex-wrap">
+          <div class="tech-item">JavaScript</div>
+          <div class="tech-item">Vue.js</div>
+          <div class="tech-item">TailwindCSS</div>
+          <div class="tech-item">Firebase</div>
+          <div class="tech-item">Flask</div>
+          <div class="tech-item">DALL-E</div>
+          <div class="tech-item">GPT-Turbo</div>
+          <div class="tech-item">Azure</div>
+        </div>
+        <button
+          class="mt-4 bg-red-brick hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          <a href="https://mtgen-host.web.app/#/" target="_blank"
+            >Live Project</a
+          >
+        </button>
+        <button
+          class="mt-4 ml-4 bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
+        >
+          <a href="https://github.com/Chrisdalbano/mtgen-ai" target="_blank"
             >GitHub Repo</a
           >
         </button>
@@ -147,30 +223,31 @@
         <button
           class="mt-4 bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
         >
-          <a href="https://github.com/Chrisdalbano/python-turn-battle" target="_blank"
+          <a
+            href="https://github.com/Chrisdalbano/python-turn-battle"
+            target="_blank"
             >GitHub Repo</a
           >
         </button>
       </div>
-      
     </div>
     <div class="flex justify-center">
-        <router-link
-          to="/resume"
-          class="button-view rounded-md bg-red-brick text-white text-xl font-bold "
-        >
-          VIEW RESUME
-        </router-link>
-      </div>
+      <router-link
+        to="/resume"
+        class="button-view rounded-md bg-red-brick text-white text-xl font-bold"
+      >
+        VIEW RESUME
+      </router-link>
+    </div>
   </section>
   <footer class="p-8">
-      <p class="flex justify-center text-blue-300">
-        Made by Christian D'Albano, fueled by Espresso shots.
-      </p>
-    </footer>
+    <p class="flex justify-center text-blue-300">
+      Made by Christian D'Albano, fueled by Espresso shots.
+    </p>
+  </footer>
 </template>
 <script>
-import { gsap } from 'gsap';
+import { gsap } from "gsap";
 
 export default {
   mounted() {
@@ -178,12 +255,12 @@ export default {
   },
   methods: {
     animateCards() {
-      const cards = document.querySelectorAll('.overflow-hidden');
+      const cards = document.querySelectorAll(".overflow-hidden");
       cards.forEach((card, index) => {
         gsap.fromTo(
           card,
-          { x: '-50%', opacity: 0.2 },
-          { x: '0%', opacity: 1, duration: 0.2, delay: index * 0.02 }
+          { x: "-50%", opacity: 0.2 },
+          { x: "0%", opacity: 1, duration: 0.2, delay: index * 0.02 }
         );
       });
     },

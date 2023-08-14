@@ -126,7 +126,6 @@
     <div
       class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-gray-900 px-2 sm:px-4 md:px-6 lg:px-8 lg:text-2xl pb-8"
     >
-      
       <div
         class="rounded-lg overflow-hidden cursor-pointer"
         @mouseenter="scaleProjectUp"
@@ -146,7 +145,8 @@
           <p class="text-center text-gray-800 font-bold">QuizMeGPT</p>
           <p class="text-center text-base mt-2">
             An AI based Quiz Generator Web Application, using OpenAI's API
-            ChatGPT, Firebase and lots of regex to generate interesting quizzes based on user prompt.
+            ChatGPT, Firebase and lots of regex to generate interesting quizzes
+            based on user prompt.
           </p>
         </div>
       </div>
@@ -223,8 +223,9 @@
         >
           <p class="text-center text-gray-800 font-bold">MTGen</p>
           <p class="text-center text-base mt-2">
-            An AI powered Web Application by ChatGPT and DALL-E APIs in Flask to generate
-            custom Magic The Gathering cards based on prompts. Deployed on Azure.
+            An AI powered Web Application by ChatGPT and DALL-E APIs in Flask to
+            generate custom Magic The Gathering cards based on prompts. Deployed
+            on Azure.
           </p>
         </div>
       </div>

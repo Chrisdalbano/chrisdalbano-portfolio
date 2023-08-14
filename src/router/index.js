@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router"; // Change this from createWebHashHistory to createWebHistory
 import HomeView from "@/views/HomeView.vue";
 import WorksView from "@/views/WorksView.vue";
 import ResumeView from "@/views/ResumeView.vue";
@@ -21,11 +21,6 @@ const routes = [
     component: ResumeView,
   },
   {
-    path: "/works",
-    name: "works",
-    component: WorksView,
-  },
-  {
     path: "/quizmegpt",
     name: "quizmegpt",
     component: QMGPTViewVue,
@@ -33,7 +28,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(), // This changed from createWebHashHistory
   routes,
   scrollBehavior(to) {
     if (to.hash) {
@@ -42,6 +37,12 @@ const router = createRouter({
       return { x: 0, y: 0 }
     }
   },
+});
+
+router.afterEach((to) => {
+  if (typeof window._mfq !== "undefined") {
+    window._mfq.push(["newPageView", to.fullPath]);
+  }
 });
 
 export default router;

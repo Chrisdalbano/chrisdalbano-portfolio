@@ -29,7 +29,7 @@
         SHOW ME
       </button>
     </section>
-    <section class="flex m-4 hover:border rounded max-w-xs mt-48">
+    <section class="flex m-4 custom-border rounded max-w-xs mt-48">
       <div class="bg-gray-900 opacity-80 p-4 icon-container">
         <a
           href="https://www.linkedin.com/in/chrisdalb/"
@@ -232,7 +232,7 @@
     </div>
     <div class="flex justify-center">
       <router-link
-        to="/works#projects"
+        to="/works"
         class="button-view rounded bg-red-brick text-white text-xl font-bold"
       >
         VIEW MORE
@@ -527,5 +527,15 @@ body {
   #floating-item-3 {
     opacity: 0.1;
   }
+}
+
+.custom-border {
+  border: 2px solid transparent; /* Default transparent border */
+  transition: all 0.5s ease;
+}
+
+.custom-border:hover {
+  transition: all 0.5s ease;
+  border-color: whitesmoke; /* Change border color on hover */
 }
 </style>

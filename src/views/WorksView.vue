@@ -1,5 +1,8 @@
 <template>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
   <section class="mt-14">
     <h1
       class="flex justify-center text-center text-2xl md:text-3xl lg:text-4xl font-bold pt-32"
@@ -22,8 +25,11 @@
           :src="require('@/assets/birdmoment.jpg')"
           alt="Bird Moment"
           class="w-96 h-auto"
+          loading="lazy"
         />
-        <p class="text-sm text-center opacity-80">Photo by me in the Lakefront Beach, St. Cloud, FL</p>
+        <p class="text-sm text-center opacity-80">
+          Photo by me in the Lakefront Beach, St. Cloud, FL
+        </p>
       </div>
       <div class="text-xl">
         <h2 class="text-center flex justify-center font-serif">
@@ -31,14 +37,14 @@
         </h2>
         <p class="flex justify-center max-w-sm">
           Ready to soar into new realms of discovery and innovation, I am a
-          driven and curious developer with an interesting portfolio of projects. My
-          passion lies in finding unique solutions to complex problems, and
-          creating fantastic user experiences, whether it's a dynamic web
-          application or a high-performance software system.
+          driven and curious developer with an interesting portfolio of
+          projects. My passion lies in finding unique solutions to complex
+          problems, and creating fantastic user experiences, whether it's a
+          dynamic web application or a high-performance software system.
         </p>
       </div>
     </div>
-    
+
     <div
       id="projects"
       class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-16 pt-4"

@@ -60,8 +60,6 @@ export default {
   methods: {
     animateSelection(index) {
       gsap.to(`.navbar a:nth-child(${index + 1})`, {
-        color: "#3b82f6",
-        padding: "0.5rem",
         duration: 0.5,
         onComplete: () => {
           this.$nextTick(() => {
@@ -104,6 +102,7 @@ export default {
 
 .fade-enter,
 .fade-leave-to {
+  
   opacity: 0;
 }
 

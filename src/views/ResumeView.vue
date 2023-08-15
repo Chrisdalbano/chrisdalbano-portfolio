@@ -27,7 +27,9 @@
       </a>
     </div>
 
-    <div class="flex justify-center p-4 md:text-xl sm:text-base">
+    <div
+      class="flex justify-center lg:p-4 md:text-xl sm:text-base md:p-2 sm:p-1"
+    >
       <div class="w-full lg:w-2/3">
         <div
           class="bg-blue-mistery shadow-black shadow-2xl rounded-2xl px-8 pt-6 pb-8 mb-4"
@@ -48,7 +50,7 @@
             </p>
           </div>
           <div class="mb-4 border rounded p-2">
-            <h2 class="font-bold mb-4 flex justify-center">Contact</h2>
+            <h2 class="font-bold mb-4 flex justify-center">Contact Form</h2>
             <section class="flex flex-col sm:flex-row m-4 rounded max-w-xs">
               <div
                 class="bg-gray-900 opacity-80 p-4 icon-container text-white-cream"
@@ -180,8 +182,27 @@
           </div>
           <div class="mb-4">
             <h2 class="text-2xl font-bold mb-4 flex justify-center">
-              Professional Experience
+              Professional Journey
             </h2>
+            <p class="font-bold rounded p-2 border overflow-auto">
+              Support Engineer @ Mouseflow
+            </p>
+            <a
+              href="https://mouseflow.com/"
+              target="_blank"
+              class="font-serif text-yellow-tiger"
+              >(mouseflow.com)</a
+            >
+            <p class="mb-2">(August 2023 - Present)</p>
+            <div class="pl-4">
+              <p class="mb-8">
+                • Applying Advanced Web Development skills to provide customers
+                with the highest level of Technical Support for all tiers of the Mouseflow
+                platform, supporting diverse clients with all kinds of issues,
+                questions and onboarding with Mouseflow.
+              </p>
+            </div>
+
             <p class="font-bold rounded p-2 border overflow-auto">
               Web Application Support @ Baptist Health South Florida
             </p>
@@ -191,7 +212,7 @@
               class="font-serif text-yellow-tiger"
               >(mybaptisthealth.net)</a
             >
-            <p class="mb-2">(Jun 2022 - Present)</p>
+            <p class="mb-2">(Jun 2022 - August 2023)</p>
             <div class="pl-4">
               <p class="mb-2">
                 • Provided robust technical support for the patient portal web
@@ -199,13 +220,7 @@
                 into a Flutter web application, for end-users, internal staff,
                 and development teams.
               </p>
-              <p class="mb-2">
-                • Managed and resolved an average of 20 daily tickets pertaining
-                to the web application using ServiceNow, escalating complex
-                development issues to senior team members when necessary, and
-                providing comprehensive feedback on incidents and potential
-                solutions.
-              </p>
+
               <p class="mb-8">
                 • Assisted the development team in troubleshooting and resolving
                 issues with the patient portal application, utilizing JavaScript
@@ -232,12 +247,7 @@
                 functionality of the web application DoughRise, showcasing
                 adaptability and versatility relevant to IT practices.
               </p>
-              <p class="mb-2">
-                • Implemented continuous integration and deployment (CI/CD)
-                processes using Git and DevOps practices to improve software
-                delivery speed and reliability, highlighting experience in
-                software installation, configuration, and troubleshooting.
-              </p>
+
               <p class="mb-8">
                 • Employed Git and GitHub as the primary version control system
                 for the development of the web application DoughRise,
@@ -257,13 +267,7 @@
                 system administration tasks using Python scripts, enhancing
                 communication between EHR systems and healthcare staff.
               </p>
-              <p class="mb-2">
-                • Managed Microsoft Azure cloud infrastructure, providing high
-                availability for essential healthcare services and applications
-                during COVID-19 vaccination events in a HIPAA-compliant setting,
-                handling user management, security updates, and performance
-                monitoring to support vaccination event operations.
-              </p>
+
               <p class="mb-8">
                 • Collaborated with cross-functional teams, including healthcare
                 staff and volunteers, to troubleshoot and resolve technical

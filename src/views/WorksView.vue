@@ -19,7 +19,7 @@
     >
       (yes, I work)
     </p>
-    <div class="sm:inline-block lg:flex mt-8 mb-4 justify-center space-x-4">
+    <div class="sm:inline-block md:flex lg:flex mt-8 mb-4 justify-center space-x-4">
       <div class="ml-6 lg:ml-2 mb-4">
         <img
           :src="require('@/assets/birdmoment.jpg')"

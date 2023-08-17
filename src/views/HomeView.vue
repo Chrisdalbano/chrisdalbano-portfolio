@@ -123,6 +123,11 @@
       </h2>
     </section>
 
+    <div id="iframeModal">
+      <span class="close" @click="closeIframeModal">&times;</span>
+      <iframe src="" frameborder="0"></iframe>
+    </div>
+
     <div
       class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-gray-900 px-2 sm:px-4 md:px-6 lg:px-8 lg:text-2xl pb-8"
     >
@@ -327,8 +332,22 @@ export default {
     ScrollTrigger.getAll().forEach((ST) => ST.kill());
   },
   methods: {
+    openIframeModal(url) {
+      var modal = document.getElementById("iframeModal");
+      var iframe = modal.querySelector("iframe");
+      iframe.src = url;
+      modal.style.display = "block";
+      document.body.classList.add("no-scroll"); // Add the no-scroll class
+    },
+    closeIframeModal() {
+      var modal = document.getElementById("iframeModal");
+      modal.style.display = "none";
+      var iframe = modal.querySelector("iframe");
+      iframe.src = ""; // clear the iframe's src to stop loading the page
+      document.body.classList.remove("no-scroll"); // Remove the no-scroll class
+    },
     openProject(url) {
-      window.open(url, "_blank");
+      this.openIframeModal(url);
     },
     viewMore() {
       // Navigate to the ResumeView page
@@ -405,30 +424,13 @@ export default {
         ease: "power2.inOut",
       });
     },
-    // goToVeryBottom() {
-    //   if (this.bottomScrollTriggered) {
-    //     // If the function has already been called, do nothing and return.
-    //     return;
-    //   }
-    //   console.log("goToBottom called");
-    //   const sectionOffsetTop = document.body.scrollHeight; // This will scroll to the bottom of the page
-    //   console.log("sectionOffsetTop:", sectionOffsetTop);
-    //   gsap.to(window, {
-    //     delay: 1.2,
-    //     duration: 0.2,
-    //     scrollTo: { y: sectionOffsetTop, autoKill: false },
-    //     ease: "power2.inOut",
-    //   });
-    //   this.bottomScrollTriggered = true;
-    // },
+
     scaleProjectUp(event) {
       gsap.to(event.currentTarget, {
         scale: 1.1,
         duration: 0.3,
         ease: "power1.out",
       });
-
-      // this.goToVeryBottom();
     },
     scaleProjectDown(event) {
       gsap.to(event.currentTarget, {
@@ -546,5 +548,49 @@ body {
 .project-card:hover {
   transition: border 0.3s ease-in-out;
   border: 4px solid white;
+}
+
+#iframeModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+#iframeModal iframe {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  border: 4px solid #f9ac67;
+  border-radius: 4px;
+}
+
+.close {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  background: #ed6b5b;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.close:hover {
+  transition: all 0.3s ease;
+  background: #924b41;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
 }
 </style>

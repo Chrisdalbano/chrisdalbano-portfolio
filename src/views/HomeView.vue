@@ -127,7 +127,7 @@
       class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-gray-900 px-2 sm:px-4 md:px-6 lg:px-8 lg:text-2xl pb-8"
     >
       <div
-        class="rounded-lg overflow-hidden cursor-pointer"
+        class="project-card rounded-lg overflow-hidden cursor-pointer"
         @mouseenter="scaleProjectUp"
         @mouseleave="scaleProjectDown"
         @click="openProject('https://quizmegpt-fb.firebaseapp.com')"
@@ -152,7 +152,7 @@
       </div>
 
       <div
-        class="rounded-lg overflow-hidden cursor-pointer"
+        class="project-card rounded-lg overflow-hidden cursor-pointer"
         @mouseenter="scaleProjectUp"
         @mouseleave="scaleProjectDown"
         @click="openProject('https://moonlight-coffee-tp.firebaseapp.com')"
@@ -177,7 +177,7 @@
       </div>
 
       <div
-        class="rounded-lg overflow-hidden cursor-pointer"
+        class="project-card rounded-lg overflow-hidden cursor-pointer"
         @mouseenter="scaleProjectUp"
         @mouseleave="scaleProjectDown"
         @click="
@@ -205,7 +205,7 @@
         </div>
       </div>
       <div
-        class="rounded-lg overflow-hidden cursor-pointer"
+        class="project-card rounded-lg overflow-hidden cursor-pointer"
         @mouseenter="scaleProjectUp"
         @mouseleave="scaleProjectDown"
         @click="openProject('https://mtgen-host.web.app/#/')"
@@ -537,5 +537,14 @@ body {
 .custom-border:hover {
   transition: all 0.5s ease;
   border-color: whitesmoke; /* Change border color on hover */
+}
+
+.project-card {
+  border: 4px solid transparent;
+}
+
+.project-card:hover {
+  transition: border 0.3s ease-in-out;
+  border: 4px solid white;
 }
 </style>

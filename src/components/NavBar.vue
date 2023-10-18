@@ -6,12 +6,12 @@
           v-for="(route, index) in routes"
           :key="index"
           :to="route.path"
-          class="text-lg md:text-xl p-2 rounded hover:bg-gray-800 hover:bg-opacity-50 transition-all duration-300 ease-in-out"
+          class="text-lg md:text-xl p-2 rounded hover:bg-grey-800 hover:bg-opacity-50 transition-all duration-300 ease-in-out"
           :class="[
             $route.path === route.path
-              ? 'bg-gray-800 bg-opacity-100 opacity-100 text-blue-300'
+              ? 'bg-red-800 bg-opacity-100 opacity-100 text-white-cream'
               : '',
-            'hover:text-blue-100',
+            'hover:text-red-400',
           ]"
           @click="animateSelection(index)"
         >
@@ -92,7 +92,7 @@ export default {
 }
 
 .navbar.bg-gray-800 {
-  background-color: #2d3748;
+  background-color: #303030;
 }
 
 .fade-enter-active,

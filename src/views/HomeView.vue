@@ -2,31 +2,31 @@
   <!-- <div class="bg-[#3A3F58] min-h-screen"> -->
   <div>
     <div id="floating-item-1"></div>
-    <div id="floating-item-2"></div>
-    <div id="floating-item-3"></div>
+    <!-- <div id="floating-item-2"></div>
+    <div id="floating-item-3"></div> -->
     <section class="p-4 md:p-20 lg:p-32">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold pt-32" ref="title">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold max-w-fit mt-32 text-red-brick" ref="title">
         CHRISTIAN D'ALBANO
       </h1>
       <h2 class="text-xl md:text-2xl mt-2" ref="subtitle">
-        is a Developer based in Orlando, FL
+        A Creative Developer based in Orlando, FL
       </h2>
 
-      <p class="mt-8 text-lg max-w-4xl">
-        From creative ideas to responsive and useful web applications, my love
-        for development is deeply influenced by my passion to turn ideas into
-        functional matter. I enjoy breaking down problems to bring life
-        impactful, user-based websites pixel by pixel. Let’s use this momentum.
+      <p class="mt-8 text-lg max-w-2xl">
+        From creative solutions, to responsive engineered web applications, my love
+        for development is deeply influenced by my passion to materialize ideas into
+        real life solutions. I enjoy breaking down problems to bring life
+        impactful, user-based websites pixel by pixel.
       </p>
 
       <button
-        class="bg-red-brick rounded p-2 pl-4 pr-4 mt-4 hover:bg-red-800 font-bold"
+        class="bg-red-brick p-2 pl-4 pr-4 mt-4 hover:bg-red-800 font-bold"
         @click="goToBottom"
         @mouseenter="scaleButtonUp"
         @mouseleave="scaleButtonDown"
         ref="showMeButton"
       >
-        SHOW ME
+        KNOW ME
       </button>
     </section>
     <section class="flex m-4 custom-border rounded max-w-xs mt-48">
@@ -70,7 +70,7 @@
       </div>
     </section>
     <section
-      class="bg-gray-900 opacity-80 mt-12 py-6 px-4"
+      class="bg-red-900 opacity-80 mt-12 py-6 px-4"
       ref="craftingSection"
     >
       <h2 class="text-center text-3xl font-bold mb-8 text-white-cream">
@@ -256,7 +256,7 @@
     </div>
 
     <footer class="p-8">
-      <p class="flex justify-center text-blue-300">
+      <p class="flex justify-center text-red-brick">
         Made by Christian D'Albano, fueled by Espresso shots.
       </p>
     </footer>
@@ -468,15 +468,15 @@ export default {
 }
 
 #floating-item-1 {
-  background-image: url("@/assets/props/sun.png");
+  background-image: url("@/assets/round-h-image.png");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 35%;
-  height: 35%;
+  width: 50%;
+  height: 50%;
   position: absolute;
   top: 20%;
   left: 70%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -40%);
   z-index: -2;
   opacity: 1;
 }
@@ -508,7 +508,7 @@ export default {
 }
 
 body {
-  background-color: #3a3f58;
+  background-color: #1f1f1f;
 }
 
 .button-view {
